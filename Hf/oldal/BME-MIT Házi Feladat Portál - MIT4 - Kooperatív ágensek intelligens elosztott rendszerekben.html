@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.01 transitional//en" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0043)https://hf.mit.bme.hu/hallgato/vimiad02/297 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben</title>
+		<link rel="stylesheet" type="text/css" href="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/index.css">
+		<link rel="stylesheet" type="text/css" href="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/ejk.css">
+		<link rel="shortcut icon" href="https://hf.mit.bme.hu/images/favico.ico" type="image/x-icon">
+
+		<script async="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/analytics.js.download"></script><script src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/jquery-1.10.2.min.js.download"></script>
+		<script src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/Clipboard.js.download"></script>
+		<script src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/hf.js.download"></script>
+		<script src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/ejk2.js.download"></script>
+
+		<script type="text/javascript">
+			var previousColor = "";
+		</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-45301701-2', 'bme.hu');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body id="body" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" style="">
+		<div class="banner no-print">
+
+			<div style="float:right">
+				<a href="http://www.mit.bme.hu/">
+					<img src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/mit_logo.gif">
+				</a>
+			</div>
+						<div class="page_banner" style="padding-left:5px;">
+				<a href="https://hf.mit.bme.hu/" class="header_link">
+					<img src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/site_logo.png" style="vertical-align:middle">
+					&nbsp;
+					BME-MIT Házi Feladat Portál 
+				</a>
+			</div>
+		</div>
+	
+		<div class="modebar no-print" style="border-collapse:collapse; padding-top:2px; padding-bottom:0px; padding-left:0px; height:20px; position:relative;">
+			<div class="menu_text">
+				&nbsp;
+				<a class="header_link" href="https://hf.mit.bme.hu/hallgato">Biró László (J16K4I)</a>
+				<span class="bold_span">&gt;&nbsp;</span>
+				<a class="header_link" href="https://hf.mit.bme.hu/hallgato/vimiad02">Rendszertervezés laboratórium 2</a>
+				<span class="bold_span">&gt;&nbsp;</span>
+				<a class="header_link" href="https://hf.mit.bme.hu/hallgato/vimiad02/297">MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben</a>
+			</div>
+			<div id="menu_right"><img src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/eng.png" style="margin-top:3px; margin-right:15px;" class="hand" onclick="document.getElementById(&#39;change_lang_form&#39;).submit()"> <a href="https://hf.mit.bme.hu/kilepes" class="header_link">Kilépés</a></div>
+		</div>
+		
+		<div class="header-bottom no-print">&nbsp;</div>
+		
+		<div class="content"><h1>MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben elektronikus jegyzőkönyv</h1><div id="notification" class="right" style="position:fixed; bottom:10px; right:10px; background-color:#6f0203; color:white; padding:20px; display:none;">&amp;nbps;</div><div style="float:right; ">Terem: <select id="terem" onchange="ejk_meta_change()" readonly="" disabled=""><option value="2">IB 413</option><option value="1">IE 226</option><option value="0" selected="">N/A</option></select> Mérőhely: <input id="merohely" class="center" value="" style="width:40px;" maxlength="5" onchange="ejk_meta_change()" readonly="" disabled="">&nbsp;</div><p id="ejk_kozremukodok">Közreműködők ebben a jegyzőkönyvben: <span>Bíró László (J16K4I)</span>.</p><p class="red"><i>Ezt a jegyzőkönyvet 2021-11-29 14:18:05-kor Eredics Péter lezárta. A jegyzőkönyv a továbbiakban csak akkor szerkeszthető, ha a lezárást egy oktató megszünteti.</i></p><p class="red"><b>Eredmény: 5 pont és 3 IMSc pont</b></p><div style="clear:both"></div><div class="ejk_blokk"><div class="ejk_blokk_szoveg" id="ejk_blokk_szoveg_116"><h1>Bevezetés</h1>
+
+<h2>Célkitűzések</h2>
+
+<p>Jelen labormérés célja, hogy a hallgatók játékos formában és minimális programozási teher mellett ismerkedjenek meg a kooperatív autonóm ágenseket tartalmazó rendszerek fejlesztésének gyakorlati aspektusaival.</p>
+
+<p>A méréshez egy teljes grafikus keretrendszert biztosítunk. A célunk ezzel az, hogy a hallgatók a hatékony ágens vezérlési stratégiák kitalálásában, majd e stratégiák többágenses együttműködés esetére történő kiterjesztésében gyakorlati tapasztalatokat szerezhessenek.</p>
+
+<h2>A labor lebonyolítása</h2>
+
+<p>A MIT3 és MIT4 labormérések lebonyolítása a hagyományostól eltérő módon történik úgy, hogy a hivatalosan az órarendben ütemezett laboralkalmak során mindössze konzultációs lehetőséget nyújtunk, mely konzultáción a részvétel nem kötelező. A labor teljesítéséhez a laborfeladatok megfelelő szinten történő kidolgozása és a kapcsolódó elektronikus jegyzőkönyv határidőre történő beadása a követelmény a <a href="https://hf.mit.bme.hu/">https://hf.mit.bme.hu</a> portálon keresztül, a konzultáción történő személyes megjelenés nem.</p>
+
+<p>A mérés során a hallgatók önállóan dolgoznak, a feladat teljesítése és értékelése is egyénileg (nem mérőpárokban) történik. A mérés tervezett időigénye: 1 óra felkészülés, 1 óra ismerkedés a keretrendszerrel valamint 3 óra ágens fejlesztés, kísérletezés és dokumentálás.</p>
+
+<h2>Kooperatív ágensek</h2>
+
+<p>Utóbbi években az informatikai technológiák elé tornyosuló egyik legkomolyabb kihívás a katasztrófahelyzetek elhárításának hatékony támogatása vált. Informatikai/robotikus megoldások számos előnnyel rendelkeznek: működőképesek maradnak az ember számára adverz körülmények között, döntési és kooperativítási képességeiben kevésbé érzékenyek az embereket lebénítő streszhatásokra, miniaturizálás révén képesek ott is szolgálni, ahol az emberi, vagy az állati mentők testméretei ezt lehetetlenné teszik, végül, de nem utolsósorban a gépi intelligencia, a gépi tanulás beépítése révén komoly partnerséget jelenthetnek az emberi mentőcsapatok számára.</p>
+
+<p>Az ilyen informatikai alkalmazások alapvető problémája, hogy a megtervezett szoftver (és hardver) helyessége formálisan érdemben nem verifikálható, hiszen ehhez rendelkezni kellene a feladat részletes formális specifikációjával. Egyetlen kiút a megfelelő pontosságú és komplexitású szimulációk és ebből a körből merít a jelen mérési feladat.&nbsp;</p>
+
+<h2>A feladat</h2>
+
+<p>Jelen labor során a feladat egy szimulált környezetben olyan autonóm robotok vezérlésének megtervezése, melyek földrengés után a megrongálódott épületekben kutatnak túlélők után. Az ilyen robotok fejlesztése napjainkban komoly hangsúlyt kapott, ugyanis egy épületeket összedönteni képes földrengés általában olyan nagy területet érinti, hogy a mentéshez sosem áll rendelkezésre kellő létszámú emberi személyzet.&nbsp; Ilyen helyzetben óriási segítség lehet, ha az áldozatok felkutatásában olyan autonóm robotok is segítséget tudnak nyújtani, melyek emberi távfelügyelet nélkül képesek nagy területet bejárni, illetve a szűk réseken bejutva olyan helyeket felderíteni ahova például csak mentőkutyák juthatnának be.</p>
+
+<p align="center"><img src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/img1.jpg" style="border-width: 0px; border-style: solid;"></p>
+
+<p>Jelen laborfeladat során ebben a környezetben működő robotoknak kell a vezérlő programját elkészíteni. A feladat során a laborra rendelkezésre álló korlátos időkeret miatt az alábbi egyszerűsítésekkel élünk a valósághoz képest:</p>
+
+<ul>
+	<li>A robotok feladata egyetlen épület felderítése, tehát viszonylag kis méretű pályán kell dolgozniuk – a valóságban általában sokkal nagyobb a bejárandó terület.</li>
+	<li>Feltételezzük, hogy a robot az épület területének nagyobb részén szabadon tud mozogni, vagyis nem foglalkozunk a nehezen hozzáférhető részekkel és az esetleges mechanikai problémákkal a mozgás során – a valóságban komoly mérnöki kihívást jelent a robotok számára ilyen környezetben mozogni.</li>
+	<li>Feltételezzük, hogy a robot képes a megtalált sérülteket önállóan megmozdítani és az épületből kivinni – a valóságban a robotok mérete és felszereltsége egyelőre nem tesz lehetővé ilyen jellegű autonóm mentést, ráadásul a sérültek mozgatása orvosi szempontból is aggályos lehet.</li>
+	<li>Nem foglalkozunk a robotok véges tápellátásával, vagyis az akkumulátorok kimerülésével és esetleges töltésigényével.</li>
+	<li>Nem foglalkozunk ütközéselkerüléssel: a pályán csak robotok mozognak, és nekik most megengedjük, hogy egy pozíción egyszerre többen is tartózkodjanak.</li>
+</ul>
+
+<h1>A RescueFramework keretrendszer</h1>
+
+<h2>Bevezetés</h2>
+
+<p>Az RescueFramework keretrendszer egy Java alkalmazás, mely&nbsp;teljes forráskóddal <u><a href="https://hf.mit.bme.hu/ejk/297/RescueFramework.zip">innen tölthető le</a></u>. Az alkalmazás <em>RescueFramework</em> főosztályának <em>main()</em> metódusával futtatható és önálló grafikus felülettel rendelkezik. A feladat megoldása során a keretrendszer <em>rescueagents</em> package-ében található <em>RobotControl</em> osztályban kell implementálni a robotok vezérlését.</p>
+
+<h2>A grafikus szimulátor</h2>
+
+<p>A keretrendszer grafikus felületének főablakát az alábbi ábra szemlélteti.</p>
+
+<p align="center"><img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/01.jpg" style="width: 1200px; height: 800px;"></p>
+
+<p>A felhasználói felületen a következő beállítások végezhetők el:</p>
+
+<ul>
+	<li>Map: itt van lehetőség választani a térképek közül (a program a maps alkönyvtár fájljait ajánlja itt fel)</li>
+	<li>Robots: ebben a mezőben lehet megadni, hogy hány robot példány szerepeljen a futtatott szimulációban.</li>
+</ul>
+
+<p>A szimuláció a következő eszközökkel vezérelhető:</p>
+
+<ul>
+	<li>Load simulation gomb: betölti a térképet és létrehozza a beállított számú robotot a térképen meghatározott kezdő pozíción. A térkép épületen belüli része ismeretlen &nbsp;a robotok számára.</li>
+	<li>Single step gomb: minden résztvevő robot egyetlen lépést tesz az implementált stratégiának megfelelően.</li>
+	<li>Start / Pause gomb: a szimuláció automatikus léptetése indítható illetve állítható meg.</li>
+	<li>Autostep speed csúszka: a szimuláció automatikus léptetésének sebessége állítható itt.</li>
+	<li>Agent perspective mező: be- illetve kikapcsolható a térképen a robotok által még fel nem fedezett mezők kitakarása.</li>
+</ul>
+
+<p>A keretrendszer bármikor lehetőséget biztosít tesztelési céllal beavatkozni és kézzel vezérelni az első robotot:</p>
+
+<ul>
+	<li>A billentyűzet fel-le és jobbra-balra gombjaival közvetlenül léptethető az első robot.</li>
+	<li>Az egérrel a pálya tetszőleges cellájára kattintva a robot oda áthelyezhető.</li>
+</ul>
+
+<p>A szimulátorban az alábbi objektumokkal találkozhatnak a robotok:</p>
+
+<ul>
+	<li><img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/robot2.png" style="width: 64px; height: 64px;">&nbsp;Autonóm robot: az első robot kézzel is vezérelhető, a további robotok csak autonóm működésre képesek. Egy mezőn egyszerre több robot is tartózkodhat a működés során.</li>
+	<li><img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/patient.png" style="width: 64px; height: 64px;">&nbsp;<img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/patient-dead.png" style="width: 64px; height: 64px;">&nbsp;Elő és már elhunyt sérültek: a szimulátor a sérült alatt zöld-piros átmenetes sávval jelzi a sérült hátralevő életerejét, mely minden körben eggyel csökken.</li>
+	<li><img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/chair11.png" style="width: 64px; height: 64px;">&nbsp;<img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/chair31.png" style="width: 64px; height: 64px;">&nbsp;<img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/desk11.png" style="width: 64px; height: 64px;">&nbsp;&nbsp;<img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/junk10.png" style="width: 64px; height: 64px;">&nbsp;<img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/junk20.png" style="width: 64px; height: 64px;">&nbsp; Bútorok és törmelékkupacok (a robot számára járhatatlan mezők)<br>
+	&nbsp;</li>
+</ul>
+
+<p><br>
+A pályán kétféle speciális mező található:</p>
+
+<ul>
+	<li>Start mező: innen indulnak a robotok.</li>
+	<li>Exit mezők: az EXIT felirattal rendelkező mezőkön történik a sérültek átvétele a robotoktól.</li>
+</ul>
+
+<p>A szimulátor működése során segítségül mindig megjeleníti a legközelebbi kijárathoz (zöld), a legközelebbi sérülthöz (piros) és a legközelebbi elérhető de felderítetlen mezőhöz (szürke) vezető utakat (lásd az alábbi ábrát).</p>
+
+<p style="text-align: center;"><img alt="" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/02.jpg" style="width: 1200px; height: 800px;"></p>
+
+<h2>A konkrét feladat</h2>
+
+<p>A fentiek alapján a feladat úgy foglalható össze, hogy a robotoknak fel kell kutatniuk a pályán található sérülteket és azokat egy exit mezőre kell szállítaniuk lehetőleg még élve. A szimuláció akkor ér véget, ha minden sérült (élve vagy holtan) egy exit mezőre került, ekkor értékeli a keretrendszer a robotok teljesítményét az élve megmentett sérültek százalékos arányának kiszámításával.</p>
+
+<p>A sérültek kezdő életereje és pozíciója fixen rögzített a pályán, azonban a robotok számának növelésével a sérültek életereje arányosan csökken (tehát az egy robot esetén 300 egység életerővel rendelkező sérült három robot esetén már csak 100 egység életerővel rendelkezik). Minden körben minden robot tehet egy lépést további minden megmentésre váró sérült életereje is egy egységgel csökken.</p>
+
+<p>A robotok egyszerre egy sérültet tudnak szállítani, akinek a felvétele automatikus a cellájára lépve. A sérült leadása is automatikusan történik akkor, ha egy sérültet szállító robot egy exit mezőre lép. A szimuláció automatikus léptetése megáll, ha minden sérült (vagy elhunyt) kimentésre kerül, vagy ha egyetlen robot se kíván további lépést tenni.</p>
+
+<p>&nbsp;</p>
+
+<h2>Ágens fejlesztése</h2>
+
+<p>A keretrendszer egy hagyományos Java alkalmazás formájában került megvalósításra. Az alkalmazáson belül három package található: az r<em>escueagents</em> tartalmazza a robotokat vezérlő ágens osztályt, a <em>rescueframework</em> a keretrendszer forrásfájljait, míg a <em>world</em> package a világot leíró fájlokat tárolja.</p>
+
+<h3>Az ágensek forráskódja</h3>
+
+<p>Az r<em>escueagents</em> package RobotControl osztályában van lehetőség az ágensek intelligenciájának implementálására. &nbsp;A RobotControl osztály az AbstractRobotControl leszármazottja, ahol a robotok egyedi számmal történő ellátása került implementálásra.</p>
+
+<p>Szükség esetén használható az <em>world</em> package <em>AStarSearch</em> statikus osztálya, mellyel A* keresést lehet megvalósítani két cella között a robotok által ismert cellákat figyelembe véve:</p>
+
+<p><strong>Path AStarSearch.search(Cell start, Cell target, int maxDistance)</strong></p>
+
+<p>Ezzel a függvénnyel a start cellából a target cellába kereshetünk utat, mely maximum maxDistance lépés hosszú. A maxDistance értékét -1-re állítva nincs korlátozás a megtalált út hosszára. Ha nem található út a két cella között, akkor a függvény NULL értékkel tér vissza.</p>
+
+<p>A visszakapott Path objektum <em>getFirstCell()</em> függvénye adja a cél felé vezető út első lépését. Az úton történő elinduláshoz a <em>directionFrom(robot.getLocation())</em> függvény használható.</p>
+
+<h3>Az ágens érzékelése</h3>
+
+<p>A robot a <em>RobotPercepcion</em> interfészen keresztül az alábbi függvényekkel fér hozzá a világ állapotához:</p>
+
+<p style="margin-left:35.45pt;"><strong>public int getTime(); </strong></p>
+
+<p style="margin-left:35.4pt;">Visszaadja a szimulációs idő értékét.</p>
+
+<p style="margin-left:35.45pt;"><strong>public ArrayList<cell> getExitCells();</cell></strong></p>
+
+<p style="margin-left:35.4pt;">Visszaadja az exit cellák listáját.</p>
+
+<p style="margin-left:35.45pt;"><strong>public ArrayList<cell> getUnknownCells();</cell></strong></p>
+
+<p style="margin-left:35.4pt;">Visszaadja a robotok által még fel nem derített cellák listáját.</p>
+
+<p style="margin-left:35.45pt;"><strong>public ArrayList<injured> getDiscoveredInjureds();</injured></strong></p>
+
+<p style="margin-left:35.4pt;">Visszaadja a már felderített sérültek listáját.</p>
+
+<p style="margin-left:35.45pt;"><strong>public ArrayList<robot> getRobtos();</robot></strong></p>
+
+<p style="margin-left:35.4pt;">Visszaadja a robotok cellák listáját.</p>
+
+<p style="margin-left:35.45pt;"><strong>public Path getShortestExitPath(Cell start);</strong></p>
+
+<p style="margin-left:35.4pt;">Kiszámítja a legközelebbi kijárathoz vezető utat.</p>
+
+<p style="margin-left:35.45pt;"><strong>public Path getShortestUnknownPath(Cell start);</strong></p>
+
+<p style="margin-left:35.4pt;">Kiszámítja a legközelebbi felderítetlen cellához vezető utat.</p>
+
+<p style="margin-left:35.45pt;"><strong>public Path getShortestInjuredPath(Cell start);</strong></p>
+
+<p style="margin-left:35.4pt;">Kiszámítja a legközelebbi sérülthöz vezető utat.</p>
+
+<p>Az ágensek implementálása során az itt bemutatott érzékelésekre kell támaszkodni, tehát a világot direktben reprezentáló world.Map osztályhoz nem fordulhatnak az ágensek információért!</p>
+
+<h3>Az ágens beavatkozási lehetősége</h3>
+
+<p>A RobotControl osztály <em>step()</em> függvénye egy Integer objektummal tér vissza, melynek jelentése az alábbi lehet:</p>
+
+<ul>
+	<li>NULL: a robot nem kíván megmozdulni</li>
+	<li>0: a robot felfelé kíván lépni</li>
+	<li>1: a robot jobbra kíván lépni</li>
+	<li>2: a robot lefelé kíván lépni</li>
+	<li>3: a robot balra kíván lépni</li>
+</ul>
+
+<p>A visszaadott érték alapján a szimulátor ellenőrzi, hogy az adott irányba lehet-e lépni (nincs-e ott bútor vagy törmelék kupac) és végrehajtja a lépést. Ha a célcellán sérült tartózkodik és a robot nem szállít még sérültet, akkor automatikusan felveszi azt. Ha a célcella exit cella és a robot sérültet szállít, akkor a robot automatikusan leadja a sérültet.</p>
+
+<h1>Mérési feladatok</h1>
+
+<h2>Feladatok</h2>
+
+<p>A mérés során a feladat a fentiekben ismertetett RescueFramework keretrendszerrel kell megismerkedni, majd egy önállóan hatékony és csapatban dolgozni is képes ágens kifejlesztése a cél.</p>
+
+<h3>Előkészületek</h3>
+
+<p>A keretrendszer <u><a href="https://hf.mit.bme.hu/ejk/297/RescueFramework.zip">innen tölthető le</a></u>. A feladatok megoldása során használja a „Default.txt” térképet!</p>
+
+<h3>1.&nbsp; Feladat – Ismerkedés a szimulátorral (0.5 pont)</h3>
+
+<p>Ismerkedjen meg a szimulátor grafikus felületével és a pályával! Kézi vezérlés módban (a billentyűzet fel-le-jobbra-balra gombjaival vezérelve a robotot) járja be a pályát és juttassa ki a sérülteket!&nbsp;</p>
+
+<p style="text-align: center;">&nbsp;</p>
+</div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_192"><div style="border:1px solid transparent"><div style="float:right;"><p>1. kérdés</p></div><p></p><p>Készítsen képernyőképet az összes sérült kézi megmentése után a szimulátor ablakról!</p>
+<p>Csatolt kép:</p><p class="center"><img class="ejk_kep" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/jsg.php" id="kep_192">
+				</p></div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_192" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_192" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;192&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">A sérültek kivitele során jobb, ha egy nagyobb részét felfedezzük a pályának, persze csakha nincs a közelben egy nagyon sérült áldozat. Ez a második dolog szerintem, hogy mindig a sérültebb áldozatokat kell hamarabb kivinni, de ezt csak akkor tehetjük meg ha tudjuk, hogy hol vannak, még mielőtt meghalnának.<br>
+A megfelelő stratégia szerintem a pálya megfelelő szintű felderítése és az áldozatok között a megfelelő sorrend felállítása közötti aranyközépúton van.</div></div><div class="normal"><div id="ertekeles_blokk_192"><p class="bold" id="ertekeles_cimke_192" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_192" class="ejk_oktato_megjegyzes_div"></div></div></div></div></div><div class="ejk_blokk"><div class="ejk_blokk_szoveg" id="ejk_blokk_szoveg_117"><h3>2.&nbsp; Feladat – Autonóm vezérlés készítése (0.5 pont)</h3>
+
+<p>Készítsen egy egyszerű autonóm vezérlést egyetlen robot számára! A RobotControl osztály <em>step()</em> függvényében implementálja a megoldást!</p>
+
+<p>Egy lehetséges megoldás: A robot működhet egy olyan egyszerű stratégia szerint, hogy először felderíti a teljes pályát, majd szépen sorban mindig a hozzá legközelebbi sérültet szállítja a legközelebbi exit cellára. Ehhez használhatja a <em>percepcion</em> objektum <em>getShortestUnknownPath</em>, <em>getShortestInjuredPath</em> és <em>getShortestExitPath </em>függvényeit, melyek mindegyike egy <em>p</em> Path objektumot ad vissza. Forráskód példa a legközelebbi még fel nem fedezett mező irányába mozgásra:</p>
+
+<p>Path path = percepcion.getShortestUnknownPath(robot.getLocation());<br>
+if (path != null) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return path.getFirstCell().directionFrom(robot.getLocation());<br>
+}</p>
+
+<p>Használhatja az előbbiekben ismertetett stratégiát vagy implementálhat más hasonlóan egyszerű működést (például hogy a robot minden felfedezett sérültet azonnal kivisz, stb.).</p>
+</div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_193"><div style="border:1px solid transparent"><div style="float:right;"><p>2. kérdés</p></div><p></p><p>Ismertesse röviden szövegesen az elsőnek megvalósított működést!</p>
+
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_193" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_193" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;193&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">Első startégia: <br>
+1. Mindig a legközelebbi ismeretlen terület felé mégy, amíg meg nem lát egy áldozatot.<br>
+2. Ezután elkezd a legközelebbi áldozat felé menni, amíg fel nem veszi.<br>
+3. Amikor felvette a legközelebbi kijárat felé igyekszik a robot.<br>
+4. Amikor letette az áldozatot a folyamatot kezdi előlről. Ha nincs áldozat a legközlebbi felfedezetlen terület felé megy, különben a legközlebbi áldozat felé</div></div><div class="normal"><div id="ertekeles_blokk_193"><p class="bold" id="ertekeles_cimke_193" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_193" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_194"><div style="border:1px solid transparent"><div style="float:right;"><p>3. kérdés</p></div><p></p><p>Másolja be ide a RobotControl.java fájl tartalmát!</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_194" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_194" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;194&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">package rescueagents;<br>
+<br>
+import rescueframework.AbstractRobotControl;<br>
+import world.Cell;<br>
+import world.Path;<br>
+import world.Robot;<br>
+import world.RobotPercepcion;<br>
+<br>
+/**<br>
+ * RobotControl class to implement custom robot control strategies<br>
+ */<br>
+public class RobotControl extends AbstractRobotControl {<br>
+	/**<br>
+	 * Default constructor saving world robot object and percepcion<br>
+	 * <br>
+	 * @param robot      The robot object in the world<br>
+	 * @param percepcion Percepcion of all robots<br>
+	 */<br>
+	public RobotControl(Robot robot, RobotPercepcion percepcion) {<br>
+		super(robot, percepcion);<br>
+	}<br>
+<br>
+	/**<br>
+	 * Custom step strategy of the robot, implement your robot control here!<br>
+	 * <br>
+	 * @return Return NULL for staying in place, 0 = step up, 1 = step right, 2 =<br>
+	 *         step down, 3 = step left<br>
+	 */<br>
+	@SuppressWarnings("null")<br>
+	public Integer step() {<br>
+		// By default the robot stays in place<br>
+		// a cella, ahol a robot most van<br>
+		Cell actLoc = robot.getLocation();<br>
+		// legrövidebb út az ádlozathoz<br>
+		Path injuredPath = percepcion.getShortestInjuredPath(actLoc);<br>
+		// legrövidebb út egy ismeretlen mezőig<br>
+		Path unknowPath = percepcion.getShortestUnknownPath(actLoc);<br>
+		// legrövidebb út a kijáratig<br>
+		Path exitPath = percepcion.getShortestExitPath(actLoc);<br>
+<br>
+		// mivel az int nem lehet null, <br>
+		// ezért egy irányoktól különböző számot írtam alapértelmezett lépésértéknek<br>
+		int step = -1;<br>
+		if (robot.getInjured() == null) {	// Ha nincs nála áldozat<br>
+			if (injuredPath != null) { // áldozat felé<br>
+				Cell injLoc = injuredPath.getFirstCell();<br>
+				if (actLoc.getX() == injLoc.getX() &amp;&amp; actLoc.getY() &gt; injLoc.getY())<br>
+					step = 0;<br>
+				else if (actLoc.getX() == injLoc.getX() &amp;&amp; actLoc.getY() &lt; injLoc.getY())<br>
+					step = 2;<br>
+				else if (actLoc.getX() &lt; injLoc.getX() &amp;&amp; actLoc.getY() == injLoc.getY())<br>
+					step = 1;<br>
+				else if (actLoc.getX() &gt; injLoc.getX() &amp;&amp; actLoc.getY() == injLoc.getY())<br>
+					step = 3;<br>
+			} else if (unknowPath != null) { // szürke mező felé<br>
+				Cell unkLoc = unknowPath.getFirstCell();<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &gt; unkLoc.getY())<br>
+					step = 0;<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &lt; unkLoc.getY())<br>
+					step = 2;<br>
+				if (actLoc.getX() &lt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 1;<br>
+				if (actLoc.getX() &gt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 3;<br>
+			}<br>
+		} else {	// Ha van nála áldozat<br>
+			if (exitPath != null) { // kijárat felé<br>
+				Cell exitLoc = exitPath.getFirstCell();<br>
+				if (actLoc.getX() == exitLoc.getX() &amp;&amp; actLoc.getY() &gt; exitLoc.getY())<br>
+					step = 0;<br>
+				else if (actLoc.getX() == exitLoc.getX() &amp;&amp; actLoc.getY() &lt; exitLoc.getY())<br>
+					step = 2;<br>
+				else if (actLoc.getX() &lt; exitLoc.getX() &amp;&amp; actLoc.getY() == exitLoc.getY())<br>
+					step = 1;<br>
+				else if (actLoc.getX() &gt; exitLoc.getX() &amp;&amp; actLoc.getY() == exitLoc.getY())<br>
+					step = 3;<br>
+			} else if (unknowPath != null) { // szürke mező felé<br>
+				Cell unkLoc = unknowPath.getFirstCell();<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &gt; unkLoc.getY())<br>
+					step = 0;<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &lt; unkLoc.getY())<br>
+					step = 2;<br>
+				if (actLoc.getX() &lt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 1;<br>
+				if (actLoc.getX() &gt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 3;<br>
+			}<br>
+		}<br>
+		// ha nincs már cél a robot megáll<br>
+		if (step == -1)<br>
+			return null;<br>
+		// különben lép<br>
+		else<br>
+			return step;<br>
+	}<br>
+}</div></div><div class="normal"><div id="ertekeles_blokk_194"><p class="bold" id="ertekeles_cimke_194" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_194" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_195"><div style="border:1px solid transparent"><div style="float:right;"><p>4. kérdés</p></div><p></p><p>Készítsen egy képernyőképet az első stratégiát követő robotról működés közben!</p>
+<p>Csatolt kép:</p><p class="center"><img class="ejk_kep" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/jsg(1).php" id="kep_195">
+				</p></div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_195" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_195" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;195&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">A képen látható, amint a roboto megkapja a legközelebbi áldozatot akit talál és megy vele a legközelebbi kijárat felé.</div></div><div class="normal"><div id="ertekeles_blokk_195"><p class="bold" id="ertekeles_cimke_195" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_195" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_196"><div style="border:1px solid transparent"><div style="float:right;"><p>5. kérdés</p></div><p></p><p>Értékelje a robot teljesítményét! Milyen helyzeteket old meg jól az implementált stratégia, hol lehetne javítani a működésen?</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_196" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_196" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;196&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">Mivel más feltétel nincs, ezért nem mondható a leghatékonyabbnak. Körülbelül az áldozatok kicsivel több mint felét menti ebben a példában. Érdemes lenne egy prioritási sorrendet felállítani az áldozatok között. Esetleg a halott áldozatokét később kivinni.</div></div><div class="normal"><div id="ertekeles_blokk_196"><p class="bold" id="ertekeles_cimke_196" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_196" class="ejk_oktato_megjegyzes_div"></div></div></div></div></div><div class="ejk_blokk"><div class="ejk_blokk_szoveg" id="ejk_blokk_szoveg_118"><h3>3.&nbsp; Feladat – Fejlettebb autonóm vezérlés (1 pont)</h3>
+
+<p>Tervezzen megoldást az előző válaszban megfogalmazott gyengeségekre! Nem szükséges globálisan optimális stratégiát létrehozni, de mindenképpen javítson a robot teljesítményén az előző verzióhoz képest úgy, hogy valamilyen további információt (például a páciensek állapotát, a sérültek elhelyezkedését, stb.) figyelembe veszi! Kizárólag olyan információkra támaszkodjon, amelyek a robot számára ismertek (tehát a <em>percepcion</em> objektumon keresztül elérhetők)!</p>
+</div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_197"><div style="border:1px solid transparent"><div style="float:right;"><p>6. kérdés</p></div><p></p><p>Ismertesse röviden szövegesen az továbbfejlesztett robot működést!</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_197" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_197" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;197&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">Alapértelmezetten a legközelebbi áldozatot keresi a robot. Ezen változtatok a következő módon:<br>
+A getDiscoveredInjureds() függvény segítségével lekérem a felfedezett sérültek lisáját minden lépés előtt. Ezek közül megkeresem a legkissebb életerővel rendelkező áldozatot (getHealth() függvénnyel), aki még életben van. Hozzá keresek egy lehetséges útvonalat az AStarSearch.search(cell,cell,int) függvény segítségével (úgy éreztem szükséges használnom, legalábbis nem kaptam jobb módot), így erre felé közlekedik a robot, ha közben mondjuk például nem szed fel egy áldozatot (próbáltam dropInjured() függvényt használni, hogy mindenképp a betegebb felé menjen, de akkor eltűnt a pályáról a már felvett beteg), mert akkor visszairányítom az kijárat felé. A betegeket a robot akkor szedi fel, ha már nem érzékel élő áldozatot és felderítette a pályát.</div></div><div class="normal"><div id="ertekeles_blokk_197"><p class="bold" id="ertekeles_cimke_197" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_197" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_198"><div style="border:1px solid transparent"><div style="float:right;"><p>7. kérdés</p></div><p></p><p>Másolja be ide a RobotControl.java fájl tartalmát!</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_198" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_198" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;198&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">package rescueagents;<br>
+<br>
+import rescueframework.AbstractRobotControl;<br>
+import world.Cell;<br>
+import world.Path;<br>
+import world.Robot;<br>
+import world.RobotPercepcion;<br>
+<br>
+import java.util.ArrayList;<br>
+<br>
+import world.AStarSearch;<br>
+import world.Injured;<br>
+<br>
+/**<br>
+ * RobotControl class to implement custom robot control strategies<br>
+ */<br>
+public class RobotControl extends AbstractRobotControl {<br>
+	/**<br>
+	 * Default constructor saving world robot object and percepcion<br>
+	 * <br>
+	 * @param robot      The robot object in the world<br>
+	 * @param percepcion Percepcion of all robots<br>
+	 */<br>
+	public RobotControl(Robot robot, RobotPercepcion percepcion) {<br>
+		super(robot, percepcion);<br>
+	}<br>
+<br>
+	/**<br>
+	 * Custom step strategy of the robot, implement your robot control here!<br>
+	 * <br>
+	 * @return Return NULL for staying in place, 0 = step up, 1 = step right, 2 =<br>
+	 *         step down, 3 = step left<br>
+	 */<br>
+	@SuppressWarnings("null")<br>
+	public Integer step() {<br>
+		// By default the robot stays in place<br>
+		// a cella, ahol a robot most van<br>
+		Cell actLoc = robot.getLocation();<br>
+		// legrövidebb út az ádlozathoz<br>
+		Path injuredPath = percepcion.getShortestInjuredPath(actLoc);<br>
+		// legrövidebb út egy ismeretlen mezőig<br>
+		Path unknowPath = percepcion.getShortestUnknownPath(actLoc);<br>
+		// legrövidebb út a kijáratig<br>
+		Path exitPath = percepcion.getShortestExitPath(actLoc);<br>
+		<br>
+		// felderített áldozatok<br>
+		ArrayList<injured> discoveredInjureds = percepcion.getDiscoveredInjureds();<br>
+		ArrayList<injured> injureds = new ArrayList&lt;&gt;();<br>
+		for(int i = 0; i &lt; discoveredInjureds.size(); i++) {<br>
+			if(!discoveredInjureds.get(i).isSaved()) { // ha nincs megmentve<br>
+				System.out.println(i + ". aldozat elete: " + discoveredInjureds.get(i).getHealth());<br>
+				injureds.add(discoveredInjureds.get(i));<br>
+			}<br>
+		}<br>
+		<br>
+		// minimalis eletu kivalasztasa<br>
+		// ebbe fogjuk tarolni a legserultebb aldozatot<br>
+		Injured minHealthInjured = null;<br>
+		// felfedezett aldozatok osszes eletereje<br>
+		int sumHealth = 0;<br>
+		// alapertelmezett az elso, ha van<br>
+		if(injureds.size() &gt; 0) {<br>
+			if(injureds.get(0) != null &amp;&amp; injureds.get(0).isAlive()) {<br>
+				minHealthInjured = injureds.get(0);<br>
+				sumHealth += injureds.get(0).getHealth();<br>
+			}<br>
+		}<br>
+		// megnezzuk a tobbit is ha van<br>
+		for(int i = 1; i &lt; injureds.size(); i++) {<br>
+			if(minHealthInjured == null) {<br>
+				minHealthInjured = injureds.get(i);<br>
+			} else if(minHealthInjured.getHealth() &gt; injureds.get(i).getHealth() &amp;&amp; injureds.get(0).isAlive()) {<br>
+				minHealthInjured = injureds.get(i);<br>
+			}<br>
+			sumHealth += injureds.get(i).getHealth();<br>
+		}<br>
+		<br>
+		Path minHealthInjuredPath = null;<br>
+		if(minHealthInjured != null &amp;&amp; minHealthInjured.getLocation() != null) {<br>
+			minHealthInjuredPath = AStarSearch.search(actLoc,minHealthInjured.getLocation(), -1);<br>
+			System.out.println("Min health: " + minHealthInjured.getHealth() + "SUM: " + sumHealth);<br>
+		}<br>
+		<br>
+		// mivel az int nem lehet null, <br>
+		// ezért egy irányoktól különböző számot írtam alapértelmezett lépésértéknek<br>
+		int step = -1;<br>
+		<br>
+		if(minHealthInjuredPath != null) {<br>
+			injuredPath = minHealthInjuredPath; // ha van betegebb aldozzahoz utvonalunk, akkor oda igyekezzen<br>
+		}<br>
+		<br>
+		if (!robot.hasInjured()) {	// Ha nincs nála áldozat<br>
+			if (injuredPath != null) { // áldozat felé<br>
+				if(sumHealth == 0 &amp;&amp; unknowPath != null) {<br>
+					Cell unkLoc = unknowPath.getFirstCell();<br>
+					if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &gt; unkLoc.getY())<br>
+						step = 0;<br>
+					if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &lt; unkLoc.getY())<br>
+						step = 2;<br>
+					if (actLoc.getX() &lt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+						step = 1;<br>
+					if (actLoc.getX() &gt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+						step = 3;<br>
+				} else {<br>
+					Cell injLoc = injuredPath.getFirstCell();<br>
+					if (actLoc.getX() == injLoc.getX() &amp;&amp; actLoc.getY() &gt; injLoc.getY())<br>
+						step = 0;<br>
+					else if (actLoc.getX() == injLoc.getX() &amp;&amp; actLoc.getY() &lt; injLoc.getY())<br>
+						step = 2;<br>
+					else if (actLoc.getX() &lt; injLoc.getX() &amp;&amp; actLoc.getY() == injLoc.getY())<br>
+						step = 1;<br>
+					else if (actLoc.getX() &gt; injLoc.getX() &amp;&amp; actLoc.getY() == injLoc.getY())<br>
+						step = 3;<br>
+				}<br>
+			} else if (unknowPath != null) { // szürke mező felé<br>
+				Cell unkLoc = unknowPath.getFirstCell();<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &gt; unkLoc.getY())<br>
+					step = 0;<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &lt; unkLoc.getY())<br>
+					step = 2;<br>
+				if (actLoc.getX() &lt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 1;<br>
+				if (actLoc.getX() &gt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 3;<br>
+			}<br>
+		} else {	// Ha van nála áldozat<br>
+			if (exitPath != null) { // kijárat felé<br>
+				Cell exitLoc = exitPath.getFirstCell();<br>
+				if (actLoc.getX() == exitLoc.getX() &amp;&amp; actLoc.getY() &gt; exitLoc.getY())<br>
+					step = 0;<br>
+				else if (actLoc.getX() == exitLoc.getX() &amp;&amp; actLoc.getY() &lt; exitLoc.getY())<br>
+					step = 2;<br>
+				else if (actLoc.getX() &lt; exitLoc.getX() &amp;&amp; actLoc.getY() == exitLoc.getY())<br>
+					step = 1;<br>
+				else if (actLoc.getX() &gt; exitLoc.getX() &amp;&amp; actLoc.getY() == exitLoc.getY())<br>
+					step = 3;<br>
+			} else if (unknowPath != null) { // szürke mező felé<br>
+				Cell unkLoc = unknowPath.getFirstCell();<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &gt; unkLoc.getY())<br>
+					step = 0;<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &lt; unkLoc.getY())<br>
+					step = 2;<br>
+				if (actLoc.getX() &lt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 1;<br>
+				if (actLoc.getX() &gt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 3;<br>
+			}<br>
+		}<br>
+		<br>
+		// ha nincs már cél a robot megáll<br>
+		if (step == -1)<br>
+			return null;<br>
+		// különben lép<br>
+		else<br>
+			return step;<br>
+	}<br>
+}</injured></injured></div></div><div class="normal"><div id="ertekeles_blokk_198"><p class="bold" id="ertekeles_cimke_198" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_198" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_199"><div style="border:1px solid transparent"><div style="float:right;"><p>8. kérdés</p></div><p></p><p>Készítsen egy képernyőképet a második stratégiát követő robotról működés közben!</p>
+<p>Csatolt kép:</p><p class="center"><img class="ejk_kep" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/jsg(2).php" id="kep_199">
+				</p></div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_199" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_199" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;199&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">A robot az áldozatok nagy részét már kimentette, és még van egy kis felderíteni valója, utánna kiszállítja a tetemeket is.</div></div><div class="normal"><div id="ertekeles_blokk_199"><p class="bold" id="ertekeles_cimke_199" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_199" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_200"><div style="border:1px solid transparent"><div style="float:right;"><p>9. kérdés</p></div><p></p><p>Értékelje a robot teljesítményét! Milyen helyzeteket old meg jól az implementált stratégia, hol lehetne javítani a működésen?</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_200" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_200" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;200&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">A robot jobban teljesít, mint korábban, de még mindig sok áldozat nem éli túl. Talán egy felderítés sokat segítene a robot számára, mielőtt teljes gőzzel nekállna menteni, de ezt talán csapatmunkában lenne jobb kivitelezni, hogy ne fogyjon el olyan hamar a drága idő.</div></div><div class="normal"><div id="ertekeles_blokk_200"><p class="bold" id="ertekeles_cimke_200" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_200" class="ejk_oktato_megjegyzes_div"></div></div></div></div></div><div class="ejk_blokk"><div class="ejk_blokk_szoveg" id="ejk_blokk_szoveg_119"><h3>4.&nbsp; Feladat – Többágenses kísérletek (1 pont)</h3>
+
+<p>Végezzen kísérleteket az előző feladatban implementált robottal úgy, hogy most már 2-5 példány is részt vesz a működésben!</p>
+</div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_201"><div style="border:1px solid transparent"><div style="float:right;"><p>10. kérdés</p></div><p></p><p>Értékelje a robotok működését! Hogyan változik az önállóan hatékony robotok teljesítménye akkor, ha koordináció nélkül működnek együtt a feladat megoldásában?&nbsp;</p>
+
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_201" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_201" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;201&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">A robotok jól működnek, viszont sokszor ugyanazt az áldozatot akarják elérni, vagy csak egy csapatban nem messze egymástól mozognak, miközben például a pálya másik feléről még semmi tudomásuk sincs. Ennek következménye, hogy egy idő után minél több robot annál kevesebbet képesek kimenteni. Ha 2-3 robot van, akkor még viszonylag elég hatékonynak mondható így is.</div></div><div class="normal"><div id="ertekeles_blokk_201"><p class="bold" id="ertekeles_cimke_201" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_201" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_202"><div style="border:1px solid transparent"><div style="float:right;"><p>11. kérdés</p></div><p></p><p>Hogyan lehetne javítani együttműködéssel a csoport teljesítményén?</p>
+
+<p>Ne feledje, hogy a pálya a robotok indulásakor továbbra is ismeretlen és minden robot fixen egy helyről indul! A robotok már eddig is is együttműködtek tudásmegosztás szintjén, hiszen a térképpel kapcsolatos információkat automatikusan megosztották egymással, vagyis minden cellát elég volt egy robotnak felderítenie ahhoz, hogy annak tartalma mindenki által ismert legyen!</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_202" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_202" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;202&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">Talán amíg egyik ment a másik felderít és fordítva, de ezt több robot esetén nem egyszerű feladat optimalizálni. <br>
+Másik megoldás talán az lenne, ha megpróbálnának egy bizonyos távolságot tartani egymástól bizonyos helyzetek függvényében. Itt ezeket a bizonyos helyzetek kell valahogy megfogalmazni a robotok nyelvén.</div></div><div class="normal"><div id="ertekeles_blokk_202"><p class="bold" id="ertekeles_cimke_202" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_202" class="ejk_oktato_megjegyzes_div"></div></div></div></div></div><div class="ejk_blokk"><div class="ejk_blokk_szoveg" id="ejk_blokk_szoveg_120"><h3>5.&nbsp; Feladat – Együttműködő robotok (2 pont + 3 IMSc pont)</h3>
+
+<p>Az előző kérdésben megfogalmazott javítási lehetőségek közül implementáljon néhányat, vagyis tegye együttműködés által hatékonyabbá a robotok működését! A robotok közötti kommunikációhoz javasoljuk, hogy a RobotControl osztályban statikus változókat használjon, de természetesen bármilyen ettől eltérő megoldás (üzenetsorok, stb.) is elfogadható.</p>
+</div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_203"><div style="border:1px solid transparent"><div style="float:right;"><p>12. kérdés</p></div><p></p><p>Milyen változtatásokat hajtott végre az ágensek vezérlésén?</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_203" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_203" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;203&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">Mivel hogyha többen vannak, így hamarabb fedezik fel a pályát is, amelynek van egy olyan mellékhatása, hogy távol lévő áldozatok felé is elkezdenek indulni egyszerre többen. Ennek elkerülésére azt készítettem el, hogyha több robot van a pályán, akkor mielőtt lépnének áldozatok felé nézzék meg, hogy van-e a közelükben felfedezni való, és ha ott kapnak áldozatot, akkor arra kezdenek el menni, ezenkívül a távoli áldozatokat hagyják arra, amelyik feldezte, és ha kell segítség miután a közelükben végeztek, akkor majd oda tudnak menni.</div></div><div class="normal"><div id="ertekeles_blokk_203"><p class="bold" id="ertekeles_cimke_203" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_203" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_204"><div style="border:1px solid transparent"><div style="float:right;"><p>13. kérdés</p></div><p></p><p>Másolja be ide a RobotControl.java fájl tartalmát!</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_204" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_204" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;204&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">package rescueagents;<br>
+<br>
+import rescueframework.AbstractRobotControl;<br>
+import world.Cell;<br>
+import world.Path;<br>
+import world.Robot;<br>
+import world.RobotPercepcion;<br>
+<br>
+import java.util.ArrayList;<br>
+<br>
+import world.AStarSearch;<br>
+import world.Injured;<br>
+<br>
+/**<br>
+ * RobotControl class to implement custom robot control strategies<br>
+ */<br>
+public class RobotControl extends AbstractRobotControl {<br>
+	/**<br>
+	 * Default constructor saving world robot object and percepcion<br>
+	 * <br>
+	 * @param robot      The robot object in the world<br>
+	 * @param percepcion Percepcion of all robots<br>
+	 */<br>
+	public RobotControl(Robot robot, RobotPercepcion percepcion) {<br>
+		super(robot, percepcion);<br>
+	}<br>
+<br>
+	/**<br>
+	 * Custom step strategy of the robot, implement your robot control here!<br>
+	 * <br>
+	 * @return Return NULL for staying in place, 0 = step up, 1 = step right, 2 =<br>
+	 *         step down, 3 = step left<br>
+	 */<br>
+	@SuppressWarnings("null")<br>
+	public Integer step() {<br>
+		// By default the robot stays in place<br>
+		// a cella, ahol a robot most van<br>
+		Cell actLoc = robot.getLocation();<br>
+		// legrövidebb út az áldozathoz<br>
+		Path injuredPath = percepcion.getShortestInjuredPath(actLoc);<br>
+		// legrövidebb út egy ismeretlen mezőig<br>
+		Path unknowPath = percepcion.getShortestUnknownPath(actLoc);<br>
+		// legrövidebb út a kijáratig<br>
+		Path exitPath = percepcion.getShortestExitPath(actLoc);<br>
+		<br>
+		ArrayList<robot> robots = percepcion.getRobots();<br>
+		<br>
+		boolean sokRobot = robots.size() &gt; 1;<br>
+		<br>
+		robot.getLocation().getAccessibleNeigbour(0);<br>
+		<br>
+		// felderített áldozatok<br>
+		ArrayList<injured> discoveredInjureds = percepcion.getDiscoveredInjureds();<br>
+		ArrayList<injured> injureds = new ArrayList&lt;&gt;();<br>
+		for(int i = 0; i &lt; discoveredInjureds.size(); i++) {<br>
+			if(!discoveredInjureds.get(i).isSaved()) { // ha nincs megmentve<br>
+				System.out.println(i + ". aldozat elete: " + discoveredInjureds.get(i).getHealth());<br>
+				injureds.add(discoveredInjureds.get(i));<br>
+			}<br>
+		}<br>
+		<br>
+		// minimalis eletu kivalasztasa<br>
+		// ebbe fogjuk tarolni a legserultebb aldozatot<br>
+		Injured minHealthInjured = null;<br>
+		// felfedezett aldozatok osszes eletereje<br>
+		int sumHealth = 0;<br>
+		// alapertelmezett az elso, ha van<br>
+		if(injureds.size() &gt; 0) {<br>
+			if(injureds.get(0) != null &amp;&amp; injureds.get(0).isAlive()) {<br>
+				minHealthInjured = injureds.get(0);<br>
+				sumHealth += injureds.get(0).getHealth();<br>
+			}<br>
+		}<br>
+		// megnezzuk a tobbit is ha van<br>
+		for(int i = 1; i &lt; injureds.size(); i++) {<br>
+			if(minHealthInjured == null) {<br>
+				minHealthInjured = injureds.get(i);<br>
+			} else if(minHealthInjured.getHealth() &gt; injureds.get(i).getHealth() &amp;&amp; injureds.get(0).isAlive()) {<br>
+				minHealthInjured = injureds.get(i);<br>
+			}<br>
+			sumHealth += injureds.get(i).getHealth();<br>
+		}<br>
+		<br>
+		Path minHealthInjuredPath = null;<br>
+		if(minHealthInjured != null &amp;&amp; minHealthInjured.getLocation() != null) {<br>
+			minHealthInjuredPath = AStarSearch.search(actLoc,minHealthInjured.getLocation(), -1);<br>
+			System.out.println("Min health: " + minHealthInjured.getHealth() + "SUM: " + sumHealth);<br>
+		}<br>
+		<br>
+		// mivel az int nem lehet null, <br>
+		// ezért egy irányoktól különböző számot írtam alapértelmezett lépésértéknek<br>
+		int step = -1;<br>
+		<br>
+		if(minHealthInjuredPath != null) {<br>
+			injuredPath = minHealthInjuredPath; // ha van betegebb aldozzathoz utvonalunk, akkor oda igyekezzen<br>
+		}<br>
+		<br>
+		if (!robot.hasInjured()) {	// Ha nincs nála áldozat<br>
+			if (injuredPath != null) { // áldozat felé<br>
+				if( unknowPath != null &amp;&amp; (sumHealth == 0 || (sokRobot &amp;&amp; injuredPath.getLength() &gt; unknowPath.getLength() &amp;&amp; (unknowPath.getLength() &lt;= 5 || injuredPath.getLength() &gt; 15)))) {<br>
+					Cell unkLoc = unknowPath.getFirstCell();<br>
+					if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &gt; unkLoc.getY())<br>
+						step = 0;<br>
+					if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &lt; unkLoc.getY())<br>
+						step = 2;<br>
+					if (actLoc.getX() &lt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+						step = 1;<br>
+					if (actLoc.getX() &gt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+						step = 3;<br>
+				} else {<br>
+					Cell injLoc = injuredPath.getFirstCell();<br>
+					if (actLoc.getX() == injLoc.getX() &amp;&amp; actLoc.getY() &gt; injLoc.getY())<br>
+						step = 0;<br>
+					else if (actLoc.getX() == injLoc.getX() &amp;&amp; actLoc.getY() &lt; injLoc.getY())<br>
+						step = 2;<br>
+					else if (actLoc.getX() &lt; injLoc.getX() &amp;&amp; actLoc.getY() == injLoc.getY())<br>
+						step = 1;<br>
+					else if (actLoc.getX() &gt; injLoc.getX() &amp;&amp; actLoc.getY() == injLoc.getY())<br>
+						step = 3;<br>
+				}<br>
+			} else if (unknowPath != null) { // szürke mező felé<br>
+				Cell unkLoc = unknowPath.getFirstCell();<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &gt; unkLoc.getY())<br>
+					step = 0;<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &lt; unkLoc.getY())<br>
+					step = 2;<br>
+				if (actLoc.getX() &lt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 1;<br>
+				if (actLoc.getX() &gt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 3;<br>
+			}<br>
+		} else {	// Ha van nála áldozat<br>
+			if (exitPath != null) { // kijárat felé<br>
+				Cell exitLoc = exitPath.getFirstCell();<br>
+				if (actLoc.getX() == exitLoc.getX() &amp;&amp; actLoc.getY() &gt; exitLoc.getY())<br>
+					step = 0;<br>
+				else if (actLoc.getX() == exitLoc.getX() &amp;&amp; actLoc.getY() &lt; exitLoc.getY())<br>
+					step = 2;<br>
+				else if (actLoc.getX() &lt; exitLoc.getX() &amp;&amp; actLoc.getY() == exitLoc.getY())<br>
+					step = 1;<br>
+				else if (actLoc.getX() &gt; exitLoc.getX() &amp;&amp; actLoc.getY() == exitLoc.getY())<br>
+					step = 3;<br>
+			} else if (unknowPath != null) { // szürke mező felé<br>
+				Cell unkLoc = unknowPath.getFirstCell();<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &gt; unkLoc.getY())<br>
+					step = 0;<br>
+				if (actLoc.getX() == unkLoc.getX() &amp;&amp; actLoc.getY() &lt; unkLoc.getY())<br>
+					step = 2;<br>
+				if (actLoc.getX() &lt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 1;<br>
+				if (actLoc.getX() &gt; unkLoc.getX() &amp;&amp; actLoc.getY() == unkLoc.getY())<br>
+					step = 3;<br>
+			}<br>
+		}<br>
+		<br>
+		// ha nincs már cél a robot megáll<br>
+		if (step == -1)<br>
+			return null;<br>
+		// különben lép<br>
+		else<br>
+			return step;<br>
+	}<br>
+}</injured></injured></robot></div></div><div class="normal"><div id="ertekeles_blokk_204"><p class="bold" id="ertekeles_cimke_204" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_204" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_205"><div style="border:1px solid transparent"><div style="float:right;"><p>14. kérdés</p></div><p></p><p>Készítsen egy képernyőképet a több ágenses működésről!</p>
+<p>Csatolt kép:</p><p class="center"><img class="ejk_kep" src="./BME-MIT Házi Feladat Portál - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben_files/jsg(3).php" id="kep_205">
+				</p></div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_205" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_205" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;205&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">A képen látható, ahogy szétszélednek a pályán a robotok. Egyedül, vagy kissebb csapatokban dolgoznak, egymásra nincsenek drasztikusan kihatással a viselkedésükkel.</div></div><div class="normal"><div id="ertekeles_blokk_205"><p class="bold" id="ertekeles_cimke_205" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_205" class="ejk_oktato_megjegyzes_div"></div></div></div></div><div class="ejk_kerdes ejk_kerdes_nyitott bold" id="kerdes_blokk_206"><div style="border:1px solid transparent"><div style="float:right;"><p>15. kérdés</p></div><p></p><p>Értékelje az elkészült ágensek működését, tegyen javaslatot esetleges továbbfejlesztésekre!</p>
+				</div>	<div>
+							<div class="right normal" style="float:right;"><span id="statusz_206" class="ejk_gray">Utoljára Bíró László szerkesztette.</span></div>
+							<p>Válasz:</p><p></p><div id="szoveg_206" class="ejk_valasz_div" ondblclick="ejk_status_changed(&#39;206&#39;,1)" style="cursor:pointer" title="Dupla kattintás elfogadja a választ">Az első stratégia esetén az eredmények annak az arányában romlottak, minél több robot volt a pályán. Ennél ez kicsit stabilizálódik, mivel a robotoknak nincs olyan drasztikus kihatásuk egymásra. Nem kapkodják el egymás elől az áldozatokat, és általában nem csapatban, hanem az egész pályán elkülönülten, vagy kis csapatban dolgoznak. A stratégia nem tökéletes, de ha több robot egyszerre keres a pályán, akkor ez elég használhatónak tűnik.</div></div><div class="normal"><div id="ertekeles_blokk_206"><p class="bold" id="ertekeles_cimke_206" style="display:none">Oktatói megjegyzések:</p><div id="ertekeles_206" class="ejk_oktato_megjegyzes_div"></div></div></div></div></div><div class="ejk_blokk"><div class="ejk_blokk_szoveg" id="ejk_blokk_szoveg_121"><h2>Értékelés</h2>
+
+<p>A laborfeladatokat a benyújtott elektronikus jegyzőkönyv alapján értékeljük. Minden részfeladat megoldásával a feladatnál megadott pontszám szerezhető, melyek összegeként áll elő a mérésre kapott jegy.</p>
+
+<h1>Ajánlott irodalom és további felkészülési anyagok</h1>
+
+<p>A mérési feladat megoldható mérnöki józan ész alapon, különös rávezető irodalomra nincs szükség. Azonban a mérési feladat által mintázott probléma óriási fontosságú és az informatikai és robotikus megoldása még csak gyerekcipőben jár.<br>
+Az ajánlott irodalom gyanánt, az érdeklődéskeltés érdekében, így néhány olvasmányt mutatunk a SAR (Search And Rescue), ill. katasztrófaelhárító informatikai rendszerek témaköréből.</p>
+
+<p>A mérési feladattal rokon amerikai oktatási probléma, ötletmerítés céljából:<br>
+E. Eaton, Gridworld Search and Rescue: A Project Framework for a Course in Artificial Intelligence, Proc. of the AAAI-08 AI Education Colloquium, July 13, 2008, Chicago,&nbsp;<br>
+<a href="https://www.seas.upenn.edu/~eeaton/papers/Eaton2008Gridworld.pdf"><u>https://www.seas.upenn.edu/~eeaton/papers/Eaton2008Gridworld.pdf&nbsp;</u></a></p>
+
+<p>Mivel SAR feladatnak nemigen létezik formális megfogalmazása, a SAR céljából megtervezett informatikai/robotikus rendszerek validációja elvi alapon lehetetlen. Egyetlen lehetőség a kísérleti validáció, ehhez viszont a tényleges katasztrófákat mellőzve, ki kell alakítani „katasztrófa-szagú” valódi tesztkörnyezeteket. Foglalkozik ezzel az Amerikai Szabványügyi Hivatal:<br>
+A.S. Jacoff, E.R. Messina, J. Evans, A Standard Test Course for Urban Search and Rescue Robots, Aug 1, 2000,<br>
+<u><a href="https://www.nist.gov/publications/standard-test-course-urban-search-and-rescue-robots">https://www.nist.gov/publications/standard-test-course-urban-search-and-rescue-robots&nbsp;</a></u></p>
+
+<p>Egy áttekíntése a SAR problémára jellemző és megoldandó problémáknak:<br>
+G. Kruijff, F. Colas, T. Svoboda, J. Van Diggelen, P. Balmer, F. Pirri, R. Worst, Designing Intelligent Robots for Human-Robot Teaming in Urban Search &amp; Rescue, AAAI 2012 Spring Symposium on Designing Intelligent Robots, 2012, Stanford,&nbsp;<br>
+<a href="https://hal.archives-ouvertes.fr/hal-01143096/file/2012_Kruijff_AAAISS_Designing.pdf"><u>https://hal.archives-ouvertes.fr/hal-01143096/file/2012_Kruijff_AAAISS_Designing.pdf</u></a></p>
+
+<p>Rendszeres SAR versenyekről.<br>
+H. Kitano and S. Tadokoro, RoboCup Rescue. A Grand Challenge for Multiagent and Intelligent Systems, AI Magazine, Vol 22, Number 1, 2001, pp. 39-52,&nbsp;<br>
+<a href="http://www.aistudy.co.kr/paper/aaai_journal/AIMag22-01-002.pdf"><u>http://www.aistudy.co.kr/paper/aaai_journal/AIMag22-01-002.pdf</u></a></p>
+
+<h1><o:p></o:p></h1>
+</div></div><canvas style="border:1px solid grey; display:none;" id="my_canvas" width="300" height="300"></canvas>
+			<script>
+				jQuery(document).ready(function(){
+					ejk_page_init("zb53hLNnNJZT09kcO7KOXv7HyV3yikDJx07xB2Lo6WaThKitSK7PRQhodeV5BvIz","6714","0");
+					setTimeout(function() {
+						console.log("---");
+						console.log($(".ejk_ertekeles").first());
+						$(".ejk_ertekeles").first().focus();
+						console.log("---");
+					},2000);
+					}
+				);
+			</script>
+		
+				<script>
+					document.title = document.title + " - MIT4 - Kooperatív ágensek intelligens elosztott rendszerekben";
+				</script>
+			
+		</div>
+
+
+		<form method="post" id="change_lang_form"><input type="hidden" name="change_lang_to" value="eng"></form>
+	
+
+	
+		
+
+<div id="paste_ff" contenteditable="" style="opacity: 0; position: fixed; top: 0px; left: 0px; margin-left: -20px; width: 10px;"></div></body></html>
