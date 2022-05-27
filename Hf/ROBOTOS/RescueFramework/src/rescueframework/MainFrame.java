@@ -186,7 +186,7 @@ public class MainFrame extends javax.swing.JFrame{
 
         jLabel3.setText("Robots:");
 
-        jLabel4.setText("Autostep speed:");
+        jLabel4.setText("Box speed:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

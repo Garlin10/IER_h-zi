@@ -183,7 +183,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Autostep speed:"/>
+            <Property name="text" type="java.lang.String" value="Box speed:"/>
           </Properties>
         </Component>
       </SubComponents>

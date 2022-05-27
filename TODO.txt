@@ -1,0 +1,4 @@
+
+-Alul, ha betellik a megjelenítő szétfagy az egész.
+-A robot programját újra kell írni, hogy kezelje a megjelenő dobozokat.
+-A robot programját újra kell írni, hogy szín szerint vigye a robot a dobozokat.
