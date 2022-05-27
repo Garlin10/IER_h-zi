@@ -9,7 +9,7 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import javax.swing.JPanel;
 import world.Cell;
-import world.Injured;
+import world.Box;
 import world.Map;
 import world.Path;
 import world.Robot;
@@ -148,7 +148,7 @@ public class PaintPanel extends JPanel{
             g2.drawImage(map.getCachedImage("robot1"), x*cellSize+1, y*cellSize+1, cellSize-1, cellSize-1, null);
                       
             // Draw injured if the agent carries one
-            drawInjured(g2, robot.getLocation(), cellSize, robot.getInjured());
+            drawInjured(g2, robot.getLocation(), cellSize, robot.getBox());
         }
         
         // Draw saved patients on the bottom row
@@ -232,10 +232,10 @@ public class PaintPanel extends JPanel{
      * @param g         The Graphics2D to draw to
      * @param cell      The cell to draw to
      * @param cellSize  Size of the cell to draw
-     * @param injured   The injured to display
+     * @param box   The injured to display
      */
-    public void drawInjured(Graphics2D g, Cell cell, int cellSize, Injured injured) {
-        if (injured == null) return;
+    public void drawInjured(Graphics2D g, Cell cell, int cellSize, Box box) {
+        if (box == null) return;
         
         // Determine position
         int x = cell.getX();
@@ -259,7 +259,7 @@ public class PaintPanel extends JPanel{
 
 
         // Draw the health value
-        if (injured.getType() == 0) {
+        if (box.getType() == 0) {
             g.setColor(Color.BLUE);
             g.fillRect(x*cellSize+4, (y+1)*cellSize-9, (int)((cellSize-9)), 5);
         } /*else {

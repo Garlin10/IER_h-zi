@@ -15,7 +15,7 @@ public interface RobotPercepcion {
     // Return all unknown cells
     public ArrayList<Cell> getUnknownCells();
     // Return all discovered injured 
-    public ArrayList<Injured> getDiscoveredInjureds();
+    public ArrayList<Box> getDiscoveredInjureds();
     // Return all robots
     public ArrayList<Robot> getRobots();
 

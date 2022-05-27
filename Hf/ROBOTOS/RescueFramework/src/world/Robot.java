@@ -12,7 +12,7 @@ public class Robot {
     private Cell location;
     
     // The injured being carried by the robot
-    private Injured injured = null;
+    private Box box = null;
     
     // The control object of th robot
     private AbstractRobotControl control;
@@ -50,17 +50,17 @@ public class Robot {
      * 
      * @return      True if the robot is carrying an injured
      */
-    public boolean hasInjured() {
-        return injured != null;
+    public boolean hasBox() {
+        return box != null;
     }
     
     /**
      * Pick up an injured if the robot does not carries any
      */
     public void pickupInjured() {
-        if (injured == null) {
-            injured = location.getInjured();
-            RescueFramework.log("Picking up box: "+injured.toString());
+        if (box == null) {
+            box = location.getInjured();
+            RescueFramework.log("Picking up box: "+ box.toString());
             location.setInjured(null);
         } else {
             RescueFramework.log("Unable to pick up box: already has one.");
@@ -72,10 +72,10 @@ public class Robot {
      * 
      * @return      Return the injured that is dropped
      */
-    public Injured dropInjured() {
-        RescueFramework.log("Dropping box "+injured.toString()+" at "+location.toString());
-        Injured result = injured;
-        injured = null;
+    public Box dropInjured() {
+        RescueFramework.log("Dropping box "+ box.toString()+" at "+location.toString());
+        Box result = box;
+        box = null;
         return result;
     }
     
@@ -84,8 +84,8 @@ public class Robot {
      * 
      * @return  The injured being carried by the robot
      */
-    public Injured getInjured() {
-        return injured;
+    public Box getBox() {
+        return box;
     }
     
     /**

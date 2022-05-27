@@ -1,7 +1,6 @@
 package rescueagents;
 
 import rescueframework.AbstractRobotControl;
-import rescueframework.MainFrame;
 import rescueframework.RescueFramework;
 import world.Cell;
 import world.Path;
@@ -10,7 +9,7 @@ import world.RobotPercepcion;
 
 import java.util.ArrayList;
 
-import world.Injured;
+import world.Box;
 
 /**
  * RobotControl class to implement custom robot control strategies
@@ -40,28 +39,28 @@ public class RobotControl extends AbstractRobotControl {
 
 
         // felderített sérültek listája
-        ArrayList discoveredInjureds = percepcion.getDiscoveredInjureds();
-        ArrayList injureds = new ArrayList<>();
-        for(int i = 0; i < discoveredInjureds.size(); i++) {
-            Injured seged = (Injured) discoveredInjureds.get(i);
+        ArrayList discoveredBoxes = percepcion.getDiscoveredInjureds();
+        ArrayList box = new ArrayList<>();
+        for(int i = 0; i < discoveredBoxes.size(); i++) {
+            Box seged = (Box) discoveredBoxes.get(i);
             if(!seged.isSaved()) {
-                injureds.add(discoveredInjureds.get(i));
+                box.add(discoveredBoxes.get(i));
             }
         }
-        Path injuredPath = percepcion.getShortestInjuredPath(robot.getLocation());
+        Path boxPath = percepcion.getShortestInjuredPath(robot.getLocation());
         //Default érték, hogy ne mozogjon.
         int step = -1;
 
 
         // Ha nincs nála sérült
         int sumHealth = 1;
-        if (!robot.hasInjured()) {
+        if (!robot.hasBox()) {
 
             // De lát sérültet, akkor felé mozog
-            if (injuredPath != null) {
+            if (boxPath != null) {
 
 
-                    Cell injLoc = injuredPath.getFirstCell();
+                    Cell injLoc = boxPath.getFirstCell();
                     if (robot.getLocation().getX() == injLoc.getX() && robot.getLocation().getY() > injLoc.getY())
                         step = 0;
                     else if (robot.getLocation().getX() == injLoc.getX() && robot.getLocation().getY() < injLoc.getY())
@@ -73,11 +72,11 @@ public class RobotControl extends AbstractRobotControl {
                 }
 
         } else {
-            //Ha sérült van nála
+            //Ha doboz van nála
             if (percepcion.getShortestExitPathR(robot.getLocation()) != null) {
-                RescueFramework.log("Box type" + robot.getInjured().getType());
-                //Ha nála van a sérült, akkor csak kifelé kell mennie.
-                if(robot.getInjured().getType() == 1)
+                RescueFramework.log("Box type" + robot.getBox().getType());
+                //Ha nála van a doboz, akkor csak kifelé kell mennie.
+                if(robot.getBox().getType() == 1)
                 {
                     if (robot.getLocation().getX() == percepcion.getShortestExitPathR(robot.getLocation()).getFirstCell().getX() &&
                             robot.getLocation().getY() > percepcion.getShortestExitPathR(robot.getLocation()).getFirstCell().getY())
@@ -92,7 +91,7 @@ public class RobotControl extends AbstractRobotControl {
                             robot.getLocation().getY() == percepcion.getShortestExitPathR(robot.getLocation()).getFirstCell().getY())
                         step = 3;
                 }
-                if(robot.getInjured().getType() == 0)
+                if(robot.getBox().getType() == 0)
                 {
                     if (robot.getLocation().getX() == percepcion.getShortestExitPathB(robot.getLocation()).getFirstCell().getX() &&
                             robot.getLocation().getY() > percepcion.getShortestExitPathB(robot.getLocation()).getFirstCell().getY())
@@ -113,7 +112,7 @@ public class RobotControl extends AbstractRobotControl {
 // Ha semmi nem teljesült a fenti feltételekből, akkor megáll. (Felveszi a default értéket.)
         if (step == -1)
         {
-            return 1;
+            return 0;
         }
 
 // Amúgy meg csinálja amire teljesült a feltétel.

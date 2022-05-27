@@ -1,10 +1,10 @@
-#Fri May 27 19:44:18 CEST 2022
+#Fri May 27 21:19:30 CEST 2022
 heiht=940
-top=61
-left=451
+top=1
+left=-10
 maximized=0
-width=1200
+width=1935
 map=Default.txt
-agent_count=1
+agent_count=4
 speed=100
-height=800
+height=821

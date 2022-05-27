@@ -18,6 +18,7 @@ import rescueframework.RescueFramework;
 /**
  * The map representing the state of the world
  */
+
 public class Map implements RobotPercepcion{
     private int boxtimer = 0;
     // Cell matrix of the map
@@ -27,9 +28,9 @@ public class Map implements RobotPercepcion{
     // Image cache for loading every image only once
     private HashMap<String,BufferedImage> imageCache = new HashMap<>();
     // Injured people on the map
-    private ArrayList<Injured> injureds = new ArrayList<>();
+    private ArrayList<Box> boxes = new ArrayList<>();
     // Injureds already transported outside by the robots
-    private ArrayList<Injured> savedInjureds = new ArrayList<>();
+    private ArrayList<Box> savedBoxes = new ArrayList<>();
     // Exit cell of the map to transfer injureds to
     private ArrayList<Cell> exitCellsR = new ArrayList<>();
     private ArrayList<Cell> exitCellsB = new ArrayList<>();
@@ -52,6 +53,10 @@ public class Map implements RobotPercepcion{
     private ArrayList<Cell> incomingBoxArea = new ArrayList<>();
     private Random random = new Random();
     public void incomingBox(){
+        if(Global.boxspeed == 0)
+        {
+            return;
+        }
         if(100-Global.boxspeed>boxtimer)
 
         {
@@ -59,7 +64,7 @@ public class Map implements RobotPercepcion{
         }
         else
         {
-            Injured injured = new Injured(1000);
+            Box box = new Box(1000);
 
             Cell cell = incomingBoxArea.get(random.nextInt(incomingBoxArea.size()));
             if (!cell.hasInjured()) {
@@ -74,9 +79,9 @@ public class Map implements RobotPercepcion{
                 }
                 if(robot_there == false)
                 {
-                    cell.setInjured(injured);
-                    injured.setLocation(cell);
-                    injureds.add(injured);
+                    cell.setInjured(box);
+                    box.setLocation(cell);
+                    boxes.add(box);
                 }
 
             }
@@ -349,10 +354,10 @@ public class Map implements RobotPercepcion{
         }
         
         // Drop injured on exti cell
-        if (cell.isExit() && robot.hasInjured()) {
-            Injured savedInjured = robot.dropInjured();
-            savedInjured.setSaved();
-            savedInjureds.add(savedInjured);
+        if (cell.isExit() && robot.hasBox()) {
+            Box savedBox = robot.dropInjured();
+            savedBox.setSaved();
+            savedBoxes.add(savedBox);
         }
         
         // Change location
@@ -360,7 +365,7 @@ public class Map implements RobotPercepcion{
         
         // Pick up new injured
         if (cell.hasInjured()) {
-            if (!robot.hasInjured()) {
+            if (!robot.hasBox()) {
                 cell.getInjured().setLocation(null);
                 robot.pickupInjured();
             } else {
@@ -697,7 +702,7 @@ public class Map implements RobotPercepcion{
             RescueFramework.pause();
         }
         
-        if (stepRobots && (injureds.size() == savedInjureds.size())) {
+        if (stepRobots && (boxes.size() == savedBoxes.size())) {
             RescueFramework.log("All boxes packed. Pausing simulation.");
             RescueFramework.pause();
         }
@@ -721,10 +726,10 @@ public class Map implements RobotPercepcion{
         return exitCellsB;
     }
     
-    public ArrayList<Injured> getDiscoveredInjureds() {
-        ArrayList<Injured> result = new ArrayList<Injured>();
-        for (int i=0; i<injureds.size(); i++) {
-            if (injureds.get(i).isDiscovered()) result.add(injureds.get(i));
+    public ArrayList<Box> getDiscoveredInjureds() {
+        ArrayList<Box> result = new ArrayList<Box>();
+        for (int i = 0; i< boxes.size(); i++) {
+            if (boxes.get(i).isDiscovered()) result.add(boxes.get(i));
         }
         return result;
     }
@@ -778,10 +783,10 @@ public class Map implements RobotPercepcion{
     }
     
     public Path getShortestInjuredPath(Cell start) {
-        ArrayList<Injured> knownInjuredList = getDiscoveredInjureds();
+        ArrayList<Box> knownBoxList = getDiscoveredInjureds();
         ArrayList<Cell> cellList = new ArrayList<>();
-        for (int i=0; i<knownInjuredList.size(); i++) {
-            Cell location = knownInjuredList.get(i).getLocation();
+        for (int i = 0; i< knownBoxList.size(); i++) {
+            Cell location = knownBoxList.get(i).getLocation();
             if (location != null) {
                 cellList.add(location);
             }
@@ -791,22 +796,22 @@ public class Map implements RobotPercepcion{
     
     public int getScore() {
         int score = 0;
-        for (int i=0; i<savedInjureds.size(); i++) {
+        for (int i = 0; i< savedBoxes.size(); i++) {
             score++;
         }
         return score;
     }
     
     public int getMaxScore() {
-        return injureds.size();
+        return boxes.size();
     }
     
     public ArrayList<Robot> getRobots() {
         return robots;
     }
     
-    public ArrayList<Injured> getSavedInjureds() {
-        return savedInjureds;
+    public ArrayList<Box> getSavedInjureds() {
+        return savedBoxes;
     }
     
     public ArrayList<Path> getDisplayPaths() {

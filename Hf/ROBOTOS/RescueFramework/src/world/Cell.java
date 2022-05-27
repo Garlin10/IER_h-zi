@@ -13,7 +13,7 @@ public class Cell {
     // True if the cell is already discovered by the robots
     private boolean discovered = true;
     // The injured on this cell
-    private Injured injured = null;
+    private Box box = null;
     // True if the robot currently sees this cell
     private boolean robotSees = false;
     // Type of the cell (0 = default; 1 = red; 2 = start, 3 = blue)
@@ -201,18 +201,18 @@ public class Cell {
     
     /**
      * Add injured to the cell
-     * @param injured           The injured to be put on the cell
+     * @param box           The injured to be put on the cell
      */
-    public void setInjured(Injured injured) {
-        this.injured = injured;
+    public void setInjured(Box box) {
+        this.box = box;
     }
     
     /**
      * Return the injured on the cell
      * @return                  The injured on the cell
      */
-    public Injured getInjured() {
-        return injured;
+    public Box getInjured() {
+        return box;
     }
     
     /**
@@ -226,8 +226,8 @@ public class Cell {
         // Update the cell and injured discovered status upon discovery
         if (newValue) {
             discovered = true;
-            if (injured != null) {
-                injured.setDiscovered(true);
+            if (box != null) {
+                box.setDiscovered(true);
             }
         }
     }
@@ -253,7 +253,7 @@ public class Cell {
      * @return                  True if the cell has an injured on it
      */
     public boolean hasInjured() {
-        return injured != null;
+        return box != null;
     }
     
     /**
