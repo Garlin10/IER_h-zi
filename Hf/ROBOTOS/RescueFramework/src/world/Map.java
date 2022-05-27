@@ -623,7 +623,8 @@ public class Map implements RobotPercepcion{
         RescueFramework.log(" ---  Step "+time+"");
 
         incomingBox();
-        
+
+        /*
         // Calculate injured states
         for (int i=0; i<injureds.size(); i++) {
             Injured injured = injureds.get(i);
@@ -634,7 +635,7 @@ public class Map implements RobotPercepcion{
                     injured.setHealth(prevHealth);
                 }
             }
-        }
+        }*/
         
         // Display robot paths
         displayPaths.clear();
@@ -769,7 +770,7 @@ public class Map implements RobotPercepcion{
     public int getScore() {
         int score = 0;
         for (int i=0; i<savedInjureds.size(); i++) {
-            if (savedInjureds.get(i).isAlive()) score++;
+            score++;
         }
         return score;
     }

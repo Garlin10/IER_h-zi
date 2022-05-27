@@ -1,11 +1,12 @@
 package world;
 
+import java.util.Random;
+
 /**
  * Class representing injured people on the map
  */
 public class Injured {
-    // Healt level
-    private int health = 1000;
+
     // True if the injured have already been transported to an exit cell
     private boolean saved = false;
     // True if the injured is already discovered by a robot
@@ -16,6 +17,8 @@ public class Injured {
     private static int nextID = 1;
     // ID of the injured object
     private int id;
+
+    private int type;
 
     /**
      * Returns the location cell of the injured
@@ -40,30 +43,18 @@ public class Injured {
      * @param health        Health level of the new injured
      */
     public Injured(int health) {
-        // Save health
-        this.health = health;
-        
+
+        type = new Random().nextInt(2);
         // Generate unique ID
         id = nextID;
         nextID++;
     }
     
-    /**
-     * Return the health value of the injured
-     * @return      Health value of the injured
-     */
-    public int getHealth() {
-        return health;
+    public int getType(){
+        return type;
     }
     
-    /**
-     * Set the health value of the injured
-     * @param health        Health value of the injured
-     */
-    public void setHealth(int health) {
-        this.health = health;
-    }
-    
+
     /**
      * Mark the injured as saved
      */
@@ -84,9 +75,7 @@ public class Injured {
      * Returns the health level in percents
      * @return      The health level in percents
      */
-    public float getHealthRatio() {
-        return (float)health/1000F;
-    }
+
     
     /**
      * Returns true if the injured is alredy discovered
@@ -100,16 +89,14 @@ public class Injured {
      * Returns true if the injured is still alive
      * @return      True if the injured is still alive
      */
-    public boolean isAlive() {
-        return health>0;
-    }
+
     
     /**
      * Return the injured ID and health level in a string
      * @return      The injured ID and health level in a string 
      */
     public String toString() {
-        return "ID="+id+" with health "+health;
+        return "ID="+id;
     }
     
     /**

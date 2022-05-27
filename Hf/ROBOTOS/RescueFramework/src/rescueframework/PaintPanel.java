@@ -238,12 +238,13 @@ public class PaintPanel extends JPanel{
         // Determine position
         int x = cell.getX();
         int y = cell.getY();
-        
+
+
         // Choose alive/dead patient image
         String patientImage = "patient";
-        if (injured.getHealth() == 0) {
+        /*if (injured.getHealth() == 0) {
             patientImage = "patient-dead";
-        }
+        }*/
         
         //Draw the image
         g.drawImage(RescueFramework.map.getCachedImage(patientImage), x*cellSize+6, y*cellSize+2, cellSize-6, cellSize-12, null);
@@ -253,14 +254,19 @@ public class PaintPanel extends JPanel{
         g.drawRect(x*cellSize+3, (y+1)*cellSize-10, cellSize-8, 6);
         g.setColor(Color.white);
         g.fillRect(x*cellSize+4, (y+1)*cellSize-9, cellSize-9, 5);
-        
+
+
         // Draw the health value
-        if (injured.getHealth() == 0) {
-            g.setColor(Color.BLACK);
+        if (injured.getType() == 0) {
+            g.setColor(Color.BLUE);
             g.fillRect(x*cellSize+4, (y+1)*cellSize-9, (int)((cellSize-9)), 5);
-        } else {
+        } /*else {
             g.setColor(calculateColor(1-injured.getHealthRatio()));
             g.fillRect(x*cellSize+4, (y+1)*cellSize-9, (int)((cellSize-10)*injured.getHealthRatio()), 5);
+        }*/
+        else {
+            g.setColor(Color.RED);
+            g.fillRect(x*cellSize+4, (y+1)*cellSize-9, (int)((cellSize-9)), 5);
         }
     }
     
