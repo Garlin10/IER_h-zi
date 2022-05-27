@@ -49,14 +49,23 @@ public class Map implements RobotPercepcion{
     private ArrayList<Cell> incomingBoxArea = new ArrayList<>();
     private Random random = new Random();
     public void incomingBox(){
-
-        Injured injured = new Injured(1000);
-        Cell cell = incomingBoxArea.get(random.nextInt(incomingBoxArea.size()));
-        if (!cell.hasInjured()){
-            cell.setInjured(injured);
-            injured.setLocation(cell);
-            injureds.add(injured);
+        if(100-Global.boxspeed>boxtimer)
+        {
+            boxtimer+=5;
         }
+        else
+        {
+            Injured injured = new Injured(1000);
+            Cell cell = incomingBoxArea.get(random.nextInt(incomingBoxArea.size()));
+            if (!cell.hasInjured()) {
+                cell.setInjured(injured);
+                injured.setLocation(cell);
+                injureds.add(injured);
+            }
+            boxtimer= 0;
+        }
+
+
     }
     
     /**
