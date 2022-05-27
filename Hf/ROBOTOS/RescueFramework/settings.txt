@@ -1,10 +1,10 @@
-#Fri May 27 01:01:30 CEST 2022
-heiht=940
-top=72
-left=263
-maximized=0
-width=1200
-map=Default.txt
-speed=98
+#Fri May 27 03:02:53 CEST 2022
 agent_count=1
 height=800
+heiht=940
+left=2276
+map=Default.txt
+maximized=0
+speed=100
+top=182
+width=1200
