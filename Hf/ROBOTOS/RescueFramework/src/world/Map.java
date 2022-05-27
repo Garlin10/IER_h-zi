@@ -1,5 +1,8 @@
 package world;
 
+import com.sun.tools.javac.Main;
+import rescueframework.Global;
+import rescueframework.MainFrame;
 import world_debug.ViewLineBreakPoint;
 import world_debug.ViewLine;
 import java.awt.Color;
@@ -18,6 +21,7 @@ import rescueframework.RescueFramework;
  * The map representing the state of the world
  */
 public class Map implements RobotPercepcion{
+    private int boxtimer = 0;
     // Cell matrix of the map
     private Cell cells[][];
     // Dimensions of the map
@@ -49,14 +53,23 @@ public class Map implements RobotPercepcion{
     private ArrayList<Cell> incomingBoxArea = new ArrayList<>();
     private Random random = new Random();
     public void incomingBox(){
+        if(100-Global.boxspeed>boxtimer)
+            {
+                boxtimer+=5;
+            }
+            else
+            {
+                Injured injured = new Injured(1000);
+                Cell cell = incomingBoxArea.get(random.nextInt(incomingBoxArea.size()));
+                    if (!cell.hasInjured()) {
+                        cell.setInjured(injured);
+                        injured.setLocation(cell);
+                        injureds.add(injured);
+                    }
+                    boxtimer= 0;
+            }
 
-        Injured injured = new Injured(1000);
-        Cell cell = incomingBoxArea.get(random.nextInt(incomingBoxArea.size()));
-        if (!cell.hasInjured()){
-            cell.setInjured(injured);
-            injured.setLocation(cell);
-            injureds.add(injured);
-        }
+
     }
     
     /**

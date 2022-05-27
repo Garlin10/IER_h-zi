@@ -10,13 +10,15 @@ import java.io.File;
 import world.Map;
 import world.Robot;
 
+
 /**
  * Main frame of the simulator
  */
+
 public class MainFrame extends javax.swing.JFrame{
     // Auto step thread of the frame
     private StepThread stepThread;
-    
+
     /**
      * Creates new form MainFrame
      */
@@ -39,7 +41,7 @@ public class MainFrame extends javax.swing.JFrame{
                 if (fileName.equals(lastMap)) selectedIndex = i;
             } 
         }
-        
+
         // Select the last used map based on the saved settings
         if (selectedIndex>=0) jComboBox1.setSelectedIndex(selectedIndex);
         
@@ -84,7 +86,9 @@ public class MainFrame extends javax.swing.JFrame{
         stepThread = new StepThread();
         stepThread.start();
     }
-    
+
+
+
     /**
      * Update the GUI to the latest state of the world
      */
@@ -315,6 +319,7 @@ public class MainFrame extends javax.swing.JFrame{
      * 
      * @param evt   The change event
      */
+    //TODO SLIDER
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         if (stepThread != null) {
             // Update the simulation speed of the stepThread
@@ -322,7 +327,11 @@ public class MainFrame extends javax.swing.JFrame{
             // Save speed settings
             Settings.setInt("speed", jSlider1.getValue());
         }
+        Global.boxspeed = jSlider1.getValue();
+        RescueFramework.log("boxspeed: " +Global.boxspeed);
+
     }//GEN-LAST:event_jSlider1StateChanged
+
 
     /**
      * Pause the autostep thread
@@ -400,4 +409,5 @@ public class MainFrame extends javax.swing.JFrame{
     public int getSimulationSpeed() {
         return (100-jSlider1.getValue())+3;
     }
+
 }
