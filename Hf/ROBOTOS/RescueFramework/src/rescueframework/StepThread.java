@@ -12,6 +12,8 @@ public class StepThread extends Thread{
     private int timeLeft = 0;
     // The time of a whole step
     private int timeStep = 20;
+
+    private int beltSpeed = 20;
     
     /**
      * Main method of the thread
@@ -39,6 +41,7 @@ public class StepThread extends Thread{
                         }
                       });
                     timeLeft = timeStep;
+
                 }
             }
         }
@@ -72,7 +75,8 @@ public class StepThread extends Thread{
      * @param stepTime      The new duration of a single step
      */
     public void setStepTime(int stepTime) {
-        this.timeStep = stepTime;
-        if (timeLeft>timeStep) timeLeft = timeStep;
+        //this.timeStep = stepTime;
+        //if (timeLeft>timeStep) timeLeft = timeStep;
+        this.beltSpeed = stepTime;
     }
 }

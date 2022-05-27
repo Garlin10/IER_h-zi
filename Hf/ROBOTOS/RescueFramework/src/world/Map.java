@@ -10,6 +10,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 import javax.imageio.ImageIO;
 import rescueframework.RescueFramework;
 
@@ -43,6 +44,20 @@ public class Map implements RobotPercepcion{
     private int time = 0;
     // Start cell specified for the robots
     private Cell startCell = null;
+
+    // List of cells where the boxes can arrive
+    private ArrayList<Cell> incomingBoxArea = new ArrayList<>();
+    private Random random = new Random();
+    public void incomingBox(){
+
+        Injured injured = new Injured(1000);
+        Cell cell = incomingBoxArea.get(random.nextInt(incomingBoxArea.size()));
+        if (!cell.hasInjured()){
+            cell.setInjured(injured);
+            injured.setLocation(cell);
+            injureds.add(injured);
+        }
+    }
     
     /**
      * Default constructor
@@ -116,10 +131,10 @@ public class Map implements RobotPercepcion{
                         Cell cell = getCell(x, y);
                         
                         // Create new injured and add to cell
-                        Injured inj = new Injured(injuries);
+                        /*Injured inj = new Injured(injuries);
                         cell.setInjured(inj);
                         inj.setLocation(cell);
-                        injureds.add(inj);
+                        injureds.add(inj);*/
                     } else {
                         RescueFramework.log("Unknown object definition skipped: "+line);
                     }
@@ -163,6 +178,18 @@ public class Map implements RobotPercepcion{
         // Update agent visibility and repaint GUI
         updateAllRobotVisibleCells();
         RescueFramework.refresh();
+
+        // Adding the landing cells to the target area
+        incomingBoxArea.add(getCell(13,3));
+        incomingBoxArea.add(getCell(13,4));
+        incomingBoxArea.add(getCell(13,5));
+        incomingBoxArea.add(getCell(13,6));
+        incomingBoxArea.add(getCell(14,6));
+        incomingBoxArea.add(getCell(15,6));
+        incomingBoxArea.add(getCell(16,3));
+        incomingBoxArea.add(getCell(16,4));
+        incomingBoxArea.add(getCell(16,5));
+        incomingBoxArea.add(getCell(16,6));
     }
       
     /**
@@ -594,6 +621,8 @@ public class Map implements RobotPercepcion{
     public void stepTime(boolean stepRobots) {
         time++;
         RescueFramework.log(" ---  Step "+time+"");
+
+        incomingBox();
         
         // Calculate injured states
         for (int i=0; i<injureds.size(); i++) {
