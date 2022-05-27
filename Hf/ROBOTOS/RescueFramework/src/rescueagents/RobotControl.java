@@ -47,7 +47,7 @@ public class RobotControl extends AbstractRobotControl {
                 box.add(discoveredBoxes.get(i));
             }
         }
-        Path boxPath = percepcion.getShortestInjuredPath(robot.getLocation());
+        Path boxPath = percepcion.getShortestBoxPath(robot.getLocation());
         //Default érték, hogy ne mozogjon.
         int step = -1;
 

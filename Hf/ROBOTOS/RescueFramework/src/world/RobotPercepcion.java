@@ -26,5 +26,5 @@ public interface RobotPercepcion {
     // Returns the shortest path to an unknown cell
     public Path getShortestUnknownPath(Cell start);
     // Returns the shortest path to an injured
-    public Path getShortestInjuredPath(Cell start);
+    public Path getShortestBoxPath(Cell start);
 }

@@ -367,7 +367,7 @@ public class Map implements RobotPercepcion{
         if (cell.hasInjured()) {
             if (!robot.hasBox()) {
                 cell.getInjured().setLocation(null);
-                robot.pickupInjured();
+                robot.pickupBox();
             } else {
                 RescueFramework.log("Move failed: "+cell.getX()+" x "+cell.getY()+" is occupied by an injured, and the robot is also carrying one.");
                 return false;
@@ -689,7 +689,7 @@ public class Map implements RobotPercepcion{
             
 
             
-            p = getShortestInjuredPath(robots.get(i).getLocation());
+            p = getShortestBoxPath(robots.get(i).getLocation());
             if (p != null) {
                 p.setColor(Color.GREEN);
                 displayPaths.add(p);
@@ -782,7 +782,7 @@ public class Map implements RobotPercepcion{
         return getShortestPath(start, getUnknownCells());
     }
     
-    public Path getShortestInjuredPath(Cell start) {
+    public Path getShortestBoxPath(Cell start) {
         ArrayList<Box> knownBoxList = getDiscoveredInjureds();
         ArrayList<Cell> cellList = new ArrayList<>();
         for (int i = 0; i< knownBoxList.size(); i++) {

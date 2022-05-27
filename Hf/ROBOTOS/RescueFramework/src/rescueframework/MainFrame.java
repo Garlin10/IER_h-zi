@@ -120,7 +120,7 @@ public class MainFrame extends javax.swing.JFrame{
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        //jCheckBox1 = new javax.swing.JCheckBox();
+
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jSlider1 = new javax.swing.JSlider();
@@ -151,13 +151,7 @@ public class MainFrame extends javax.swing.JFrame{
 
         jLabel2.setText("No score yet.");
 
-        //jCheckBox1.setSelected(true);
-        //jCheckBox1.setText("Agent perspective");
-        /*jCheckBox1.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                jCheckBox1StateChanged(evt);
-            }
-        });*/
+
 
         jButton3.setText("Single step");
         jButton3.addActionListener(new java.awt.event.ActionListener() {

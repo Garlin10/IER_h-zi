@@ -11,7 +11,7 @@ public class Box {
     private boolean saved = false;
     // True if the injured is already discovered by a robot
     private boolean discovered = false;
-    // Cell location of the injured
+    // Cell lo  cation of the injured
     private Cell location = null;
     // Static ID value of the next injured
     private static int nextID = 1;

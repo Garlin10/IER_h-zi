@@ -57,7 +57,7 @@ public class Robot {
     /**
      * Pick up an injured if the robot does not carries any
      */
-    public void pickupInjured() {
+    public void pickupBox() {
         if (box == null) {
             box = location.getInjured();
             RescueFramework.log("Picking up box: "+ box.toString());
