@@ -120,7 +120,7 @@ public class MainFrame extends javax.swing.JFrame{
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        //jCheckBox1 = new javax.swing.JCheckBox();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jSlider1 = new javax.swing.JSlider();
@@ -151,13 +151,13 @@ public class MainFrame extends javax.swing.JFrame{
 
         jLabel2.setText("No score yet.");
 
-        jCheckBox1.setSelected(true);
-        jCheckBox1.setText("Agent perspective");
-        jCheckBox1.addChangeListener(new javax.swing.event.ChangeListener() {
+        //jCheckBox1.setSelected(true);
+        //jCheckBox1.setText("Agent perspective");
+        /*jCheckBox1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jCheckBox1StateChanged(evt);
             }
-        });
+        });*/
 
         jButton3.setText("Single step");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -212,7 +212,6 @@ public class MainFrame extends javax.swing.JFrame{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 288, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addContainerGap())
@@ -223,7 +222,6 @@ public class MainFrame extends javax.swing.JFrame{
                 .addGap(4, 4, 4)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jCheckBox1)
                         .addComponent(jLabel2))
                     .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -355,7 +353,7 @@ public class MainFrame extends javax.swing.JFrame{
      * @return  True if agent perspective is enabled
      */
     public boolean isFogEnabled() {
-        return jCheckBox1.isSelected();
+        return false;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
