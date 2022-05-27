@@ -46,7 +46,7 @@ public class RobotControl extends AbstractRobotControl {
                 injureds.add(discoveredInjureds.get(i));
             }
         }
-
+        /*
         //A legkisebb még megmenthető életű sérült
         Injured minHealthInjured = null;
         // felfedezett sérültek sum élete
@@ -76,16 +76,17 @@ public class RobotControl extends AbstractRobotControl {
         if(minHealthInjured != null && minHealthInjured.getLocation() != null) {
             minHealthInjuredPath = AStarSearch.search(robot.getLocation(),minHealthInjured.getLocation(), -1);
             System.out.println("Min health: " + minHealthInjured.getHealth() + "SUM: " + sumHealth);
-        }
+        }*/
 
         //Default érték, hogy ne mozogjon.
         int step = -1;
-
+        /*
         if(minHealthInjuredPath != null) {
             //A legsérültebbre állítjuk
             injuredPath = minHealthInjuredPath;
-        }
+        }*/
         // Ha nincs nála sérült
+        int sumHealth = 1;
         if (!robot.hasInjured()) {
             // De lát sérültet, akkor felé mozog
             if (injuredPath != null) {
