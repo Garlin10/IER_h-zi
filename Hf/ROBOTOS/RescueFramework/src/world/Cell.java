@@ -16,7 +16,7 @@ public class Cell {
     private Injured injured = null;
     // True if the robot currently sees this cell
     private boolean robotSees = false;
-    // Type of the cell (0 = default; 1 = exit; 2 = start)
+    // Type of the cell (0 = default; 1 = red; 2 = start, 3 = blue)
     private int cellType = 0;
     // Color code index of the floor
     private int floorColorIndex = -1;
@@ -40,10 +40,15 @@ public class Cell {
         int wallCodeInt = -1;
         
         // Determine special cell marks or wall code
-        if (wallCode.equals("X")) {
+        if (wallCode.equals("R")) {
             // Exit cell - type=1
             wallCodeInt = 0;
             cellType = 1;
+        }
+          else if (wallCode.equals("B")) {
+                // EXIT - type=3
+                wallCodeInt = 0;
+                cellType = 3;
         } else if (wallCode.equals("S")) {
             // Start cell - type=2
             wallCodeInt = 0;
@@ -54,7 +59,12 @@ public class Cell {
             wallCodeInt = 0;
         } else if (wallCode.equals(".")) {
             wallCodeInt = 0;
-        } else {
+        }
+        else if (wallCode.equals("X")) {
+            // EXIT - type=4
+            wallCodeInt = 0;
+            cellType = 4;}
+        else {
             wallCodeInt = Integer.parseInt(wallCode,16); 
         }
         
@@ -251,7 +261,7 @@ public class Cell {
      * @return                  True if the cell is an exit cell
      */
     public boolean isExit() {
-        return cellType == 1;
+        return cellType == 1 || cellType == 3;
     }
     
     /**

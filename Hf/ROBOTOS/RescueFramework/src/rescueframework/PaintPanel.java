@@ -112,12 +112,17 @@ public class PaintPanel extends JPanel{
                 if (cell.getCellType() == 1) {
                     // Exit cell
                     g2.setColor(Color.red);
-                    drawCenteredString(g2,"EXIT", new Rectangle(x*cellSize,y*cellSize,cellSize, cellSize), g2.getFont());
+                    drawCenteredString(g2,"RED", new Rectangle(x*cellSize,y*cellSize,cellSize, cellSize), g2.getFont());
 
                 } else if (cell.getCellType() == 2) {
                     // Start cell
                     g2.setColor(Color.red);
                     drawCenteredString(g2,"START", new Rectangle(x*cellSize,y*cellSize,cellSize, cellSize), g2.getFont());
+                }
+                else if (cell.getCellType() == 3) {
+                    // Start cell
+                    g2.setColor(Color.blue);
+                    drawCenteredString(g2,"BLUE", new Rectangle(x*cellSize,y*cellSize,cellSize, cellSize), g2.getFont());
                 }
 
                 // Draw fog if enabled

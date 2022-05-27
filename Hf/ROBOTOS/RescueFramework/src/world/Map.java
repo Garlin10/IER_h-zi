@@ -98,7 +98,8 @@ public class Map implements RobotPercepcion{
                         for (int i=0; i<width; i++) {
                             cells[i][row] = new Cell(i,row, array[i]);
                             if (array[i].equals("S")) startCell = cells[i][row];
-                            else if (array[i].equals("X")) exitCells.add(cells[i][row]);
+                            else if (array[i].equals("R")) exitCells.add(cells[i][row]);
+                            else if (array[i].equals("B")) exitCells.add(cells[i][row]);
                         }
                     }
 
