@@ -1,8 +1,6 @@
 package world;
 
-import com.sun.tools.javac.Main;
 import rescueframework.Global;
-import rescueframework.MainFrame;
 import world_debug.ViewLineBreakPoint;
 import world_debug.ViewLine;
 import java.awt.Color;
@@ -33,7 +31,8 @@ public class Map implements RobotPercepcion{
     // Injureds already transported outside by the robots
     private ArrayList<Injured> savedInjureds = new ArrayList<>();
     // Exit cell of the map to transfer injureds to
-    private ArrayList<Cell> exitCells = new ArrayList<>();
+    private ArrayList<Cell> exitCellsR = new ArrayList<>();
+    private ArrayList<Cell> exitCellsB = new ArrayList<>();
     // Robots operating on the map
     private ArrayList<Robot> robots = new ArrayList<>();
     // Viewlines of the robots (for robot view debug)
@@ -43,7 +42,7 @@ public class Map implements RobotPercepcion{
     // Path to be displayed on the GUI
     private ArrayList<Path> displayPaths = new ArrayList<>();
     // Visibility distance of the robots
-    private final int visibilityRange = 3;
+    private final int visibilityRange = 20;
     // Simulation time
     private int time = 0;
     // Start cell specified for the robots
@@ -61,11 +60,25 @@ public class Map implements RobotPercepcion{
         else
         {
             Injured injured = new Injured(1000);
+
             Cell cell = incomingBoxArea.get(random.nextInt(incomingBoxArea.size()));
             if (!cell.hasInjured()) {
-                cell.setInjured(injured);
-                injured.setLocation(cell);
-                injureds.add(injured);
+                boolean robot_there = false;
+                for (int i = 0; robots.size()>i;i++)
+                {
+                    if(robots.get(i).getLocation()== cell)
+                    {
+                        robot_there = true;
+                    }
+
+                }
+                if(robot_there == false)
+                {
+                    cell.setInjured(injured);
+                    injured.setLocation(cell);
+                    injureds.add(injured);
+                }
+
             }
             boxtimer= 0;
         }
@@ -111,8 +124,8 @@ public class Map implements RobotPercepcion{
                         for (int i=0; i<width; i++) {
                             cells[i][row] = new Cell(i,row, array[i]);
                             if (array[i].equals("S")) startCell = cells[i][row];
-                            else if (array[i].equals("R")) exitCells.add(cells[i][row]);
-                            else if (array[i].equals("B")) exitCells.add(cells[i][row]);
+                            else if (array[i].equals("R")) exitCellsR.add(cells[i][row]);
+                            else if (array[i].equals("B")) exitCellsB.add(cells[i][row]);
                         }
                     }
 
@@ -637,19 +650,6 @@ public class Map implements RobotPercepcion{
         RescueFramework.log(" ---  Step "+time+"");
 
         incomingBox();
-
-        /*
-        // Calculate injured states
-        for (int i=0; i<injureds.size(); i++) {
-            Injured injured = injureds.get(i);
-            if (!injured.isSaved()) {
-                int prevHealth = injured.getHealth();
-                if (prevHealth>0) {
-                    prevHealth--;
-                    injured.setHealth(prevHealth);
-                }
-            }
-        }*/
         
         // Display robot paths
         displayPaths.clear();
@@ -670,26 +670,27 @@ public class Map implements RobotPercepcion{
                 }
             }
             
-            Path p = getShortestExitPath(robot.getLocation());
-            if (p != null) {
-                p.setColor(Color.GREEN);
-                displayPaths.add(p);
-            }
-            
-            /*p = getShortestUnknownPath(robots.get(i).getLocation());
-            if (p != null) {
-                p.setColor(Color.DARK_GRAY);
-                displayPaths.add(p);
-            }*/
-            
-            p = getShortestInjuredPath(robots.get(i).getLocation());
+            Path p = getShortestExitPathR(robot.getLocation());
             if (p != null) {
                 p.setColor(Color.RED);
                 displayPaths.add(p);
+            }
+
+            p = getShortestExitPathB(robot.getLocation());
+            if (p != null) {
+                p.setColor(Color.BLUE);
+                displayPaths.add(p);
+            }
+            
+
+            
+            p = getShortestInjuredPath(robots.get(i).getLocation());
+            if (p != null) {
+                p.setColor(Color.GREEN);
+                displayPaths.add(p);
             } 
         }
-        //long end = System.currentTimeMillis();
-        //RescueFramework.log("Robot decision time: "+(end-start)+" ms");
+
         
         if (stepRobots && !movingRobot) {
             RescueFramework.log("No moving robot. Pausing simulation.");
@@ -697,7 +698,7 @@ public class Map implements RobotPercepcion{
         }
         
         if (stepRobots && (injureds.size() == savedInjureds.size())) {
-            RescueFramework.log("All injuredare outside. Pausing simulation.");
+            RescueFramework.log("All boxes packed. Pausing simulation.");
             RescueFramework.pause();
         }
         
@@ -713,8 +714,11 @@ public class Map implements RobotPercepcion{
         return null;
     }
     
-    public ArrayList<Cell> getExitCells() {
-        return exitCells;
+    public ArrayList<Cell> getExitCellsR() {
+        return exitCellsR;
+    }
+    public ArrayList<Cell> getExitCellsB() {
+        return exitCellsB;
     }
     
     public ArrayList<Injured> getDiscoveredInjureds() {
@@ -761,9 +765,13 @@ public class Map implements RobotPercepcion{
     }
     
     
-    public Path getShortestExitPath(Cell start) {
-        return getShortestPath(start, exitCells);
+    public Path getShortestExitPathR(Cell start) {
+        return getShortestPath(start, exitCellsR);
     }
+    public Path getShortestExitPathB(Cell start) {
+        return getShortestPath(start, exitCellsB);
+    }
+
     
     public Path getShortestUnknownPath(Cell start) {
         return getShortestPath(start, getUnknownCells());

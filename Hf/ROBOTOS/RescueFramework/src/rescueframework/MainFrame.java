@@ -99,7 +99,7 @@ public class MainFrame extends javax.swing.JFrame{
         // Calculate and display score
         int score = RescueFramework.map.getScore();
         int maxScore = RescueFramework.map.getMaxScore();
-        String label = "Time: "+RescueFramework.map.getTime()+" | Saved: "+score+" / "+maxScore;
+        String label = "Time: "+RescueFramework.map.getTime()+" | Packed: "+score+" / "+maxScore;
         if (maxScore > 0) {
             label = label +" ("+(score*100/maxScore)+"%)";
         }

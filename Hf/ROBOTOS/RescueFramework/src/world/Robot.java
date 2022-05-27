@@ -60,10 +60,10 @@ public class Robot {
     public void pickupInjured() {
         if (injured == null) {
             injured = location.getInjured();
-            RescueFramework.log("Picking up injured: "+injured.toString());
+            RescueFramework.log("Picking up box: "+injured.toString());
             location.setInjured(null);
         } else {
-            RescueFramework.log("Unable to pick up inured: already has one.");
+            RescueFramework.log("Unable to pick up box: already has one.");
         }
     }
     
@@ -73,7 +73,7 @@ public class Robot {
      * @return      Return the injured that is dropped
      */
     public Injured dropInjured() {
-        RescueFramework.log("Dropping injured "+injured.toString()+" at "+location.toString());
+        RescueFramework.log("Dropping box "+injured.toString()+" at "+location.toString());
         Injured result = injured;
         injured = null;
         return result;
