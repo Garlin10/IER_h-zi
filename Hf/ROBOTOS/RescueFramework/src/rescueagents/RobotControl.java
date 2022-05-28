@@ -33,6 +33,7 @@ public class RobotControl extends AbstractRobotControl {
      */
     @SuppressWarnings("null")
     public Integer step() {
+
         // By default the robot stays in place
         // legrövidebb út a legközelebbi sérülthöz
 
@@ -59,7 +60,7 @@ public class RobotControl extends AbstractRobotControl {
             // De lát sérültet, akkor felé mozog
             if (boxPath != null) {
 
-
+                    RescueFramework.log("Robotszáma" + getRobotID());
                     Cell injLoc = boxPath.getFirstCell();
                     if (robot.getLocation().getX() == injLoc.getX() && robot.getLocation().getY() > injLoc.getY())
                         step = 0;
@@ -113,6 +114,7 @@ public class RobotControl extends AbstractRobotControl {
         if (step == -1)
         {
             return 0;
+
         }
 
 // Amúgy meg csinálja amire teljesült a feltétel.

@@ -1,0 +1,8 @@
+MAS rescue {
+
+	infrastructure: Centralised
+    environment: world.MapWrapper
+	
+    agents:
+        robot0;
+}

@@ -201,27 +201,7 @@ public class PaintPanel extends JPanel{
             }
         }
         
-        
-        // Draw view lines of the robot
-        /*
-        g2.setStroke(new BasicStroke(3));
-        for (int i=0; i<map.viewLines.size(); i++) {
-            ViewLine line = map.viewLines.get(i);
-            if (line.success) {
-                g2.setColor(Color.GREEN);
-            } else {
-                g2.setColor(Color.RED);
-            }
-            g2.drawLine((int)(cellSize*line.x1), (int)(cellSize*line.y1), (int)(cellSize*line.x2), (int)(cellSize*line.y2));
-        }
-        
-        // Draw view line end points
-        for (int i=0; i<map.viewLineBreakPoints.size(); i++) {
-            ViewLineBreakPoint point = map.viewLineBreakPoints.get(i);
-            g2.setColor(point.color);
-            g2.fillRect((int)(cellSize*point.x)-2, (int)(cellSize*point.y)-2, 5, 5);
-        }
-        */
+
         
         paintingInProgress = false;
     }

@@ -15,6 +15,8 @@ import java.util.Random;
 import javax.imageio.ImageIO;
 import rescueframework.RescueFramework;
 
+import static rescueframework.Global.*;
+
 /**
  * The map representing the state of the world
  */
@@ -200,10 +202,14 @@ public class Map implements RobotPercepcion{
         
         // Init agents
         if (startCell == null) startCell = getCell(0,0);
+        robots_count = 0;
+        actual_robotID = 0;
+        resetBOTS = true;
         Cell nextStartCell = startCell;
         for (int i=0; i<robotCount;i++) {
             Robot newRobot = new Robot(nextStartCell,this);
             robots.add(newRobot);
+            robots_count ++;
             nextStartCell = nextStartCell.getAccessibleNeigbour(1);
         }
         
@@ -808,6 +814,11 @@ public class Map implements RobotPercepcion{
     
     public ArrayList<Robot> getRobots() {
         return robots;
+    }
+
+    public int RobotsSize()
+    {
+        return robots.size();
     }
     
     public ArrayList<Box> getSavedInjureds() {

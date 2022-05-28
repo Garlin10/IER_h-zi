@@ -1,0 +1,26 @@
+package world;
+
+import jason.asSyntax.Literal;
+import rescueframework.RescueFramework;
+import java.util.logging.Logger;
+
+public class MapWrapper extends jason.environment.Environment{
+	
+	private static Logger logger = Logger.getLogger("jasonTeamSimLocal.mas2j." + MapWrapper.class.getName());
+	public static MapWrapper self;
+	//RescueFramework rf;
+	
+	public MapWrapper(){
+		self = this;
+		init();
+	}
+	
+	public void init(){
+		RescueFramework.main(null);
+		//rf = new RescueFramework();
+	}
+	
+	public static void addPerceptWrapper(String agent, Literal percept){
+		self.addPercept(agent, percept);
+	}
+}

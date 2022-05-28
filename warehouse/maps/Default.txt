@@ -1,0 +1,120 @@
+// Map size
+30 20
+
+// Cell borders
+9 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3
+8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+8 . 9 1 1 1 1 1 1 1 3 . . . . . . . . 9 1 1 1 1 1 1 1 3 . 2
+8 . 8 R . . . . . . 2 1 1 1 1 1 1 1 1 8 . . . . . . B 2 . 2
+8 . 8 . . . . . . . _ . . . . . . . . _ . . . . . . . 2 . 2
+8 . 8 . . . . . . . _ . . . . . . . . _ . . . . . . . 2 . 2
+8 . 8 . . . . . . . _ . . . . . . . . _ . . . . . . . 2 . 2
+8 . C 4 4 4 _ _ _ _ 6 . . . . . . . . C _ _ _ _ _ _ 4 6 . 2
+8 . . . _ . . . . . . . . . S S . . . . . . . . . _ . . . 2
+8 . . . _ . . . . . . . . . . . . . . . . . . . . _ . . . 2
+8 . . . _ . . . . . . . . . . . . . . . . . . . . _ . . . 2
+8 . 9 1 1 1 _ _ _ 1 3 . . . . . . . . 9 _ _ _ 1 1 1 1 3 . 2
+8 . 8 . . . . . . . 2 . . . . . . . . 8 . . . . . . . 2 . 2
+8 . 8 . . . . . . . 2 . . . . . . . . 8 . . . . . . . 2 . 2
+8 . 8 . . . . . . . 2 . . . . . . . . 8 . . . . . . . 2 . 2
+8 . 8 . . . . . . . 2 4 4 4 _ _ 4 4 4 8 . . . . . . . 2 . 2
+8 . 8 R . . . . . . 2 . . . . . . . . 8 . . . . . . B 2 . 2
+8 . C 4 4 4 4 4 4 4 6 . . . . . . . . C 4 4 4 4 4 4 4 6 . 2
+8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+C 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 6
+
+// World objects
+
+// Floors
+
+// Main hall
+//Floor 6 10 1
+
+// Rooms
+//Floor 3 3 0
+//Floor 10 4 0
+//Floor 14 4 0
+//Floor 18 4 0
+//Floor 22 4 0
+//Floor 6 15 0
+//Floor 10 15 0
+//Floor 21 15 0
+//Floor 24 15 0
+
+// Obstacles
+
+//szalag
+Obstacle 14 3 szalag
+Obstacle 15 3 szalag
+Obstacle 14 4 szalag
+Obstacle 15 4 szalag
+Obstacle 14 5 szalag
+Obstacle 15 5 szalag
+
+// Room 1
+
+
+
+// Room 2
+
+
+
+// Room 3
+
+
+
+
+// Room 4
+
+
+// Room 5
+
+
+
+// Room 6
+
+
+// Room 7
+
+
+// Room 8
+
+
+// Room 9
+
+
+// Hall
+
+
+// Outside
+Obstacle 27 8 junk10
+Obstacle 2 10 junk10
+
+
+
+// Injured people
+Injured 4 3 1000
+Injured 2 6 1000
+Injured 8 3 1000
+Injured 7 5 1000
+Injured 10 4 1000
+Injured 16 4 1000
+Injured 22 3 1000
+Injured 27 4 1000
+Injured 21 7 1000
+
+Injured 11 8 1000
+Injured 14 8 1000
+Injured 15 9 1000
+
+
+Injured 4 17 1000
+Injured 4 12 1000
+Injured 7 13 1000
+Injured 10 15 1000
+Injured 19 15 1000
+Injured 22 14 1000
+Injured 22 17 1000
+Injured 22 11 1000
+Injured 25 13 1000
+

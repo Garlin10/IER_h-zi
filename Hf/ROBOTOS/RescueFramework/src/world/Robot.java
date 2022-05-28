@@ -16,6 +16,8 @@ public class Robot {
     
     // The control object of th robot
     private AbstractRobotControl control;
+
+    private int ID;
     
     
     /**

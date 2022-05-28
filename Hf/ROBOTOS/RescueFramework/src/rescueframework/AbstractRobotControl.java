@@ -3,6 +3,8 @@ package rescueframework;
 import world.Robot;
 import world.RobotPercepcion;
 
+import static rescueframework.Global.*;
+
 /**
  * Abstract class for numbering the robot control objects
  */
@@ -18,8 +20,10 @@ public abstract class AbstractRobotControl {
     
     // The robot object in the world
     protected Robot robot;
-    
-    
+
+
+
+    ;
     /**
      * Default constructor 
      * 
@@ -29,15 +33,28 @@ public abstract class AbstractRobotControl {
     public AbstractRobotControl(Robot robot, RobotPercepcion percepcion) {
         // Save the next instance ID for the current robot
         instanceId = nextInstanceID;
+
         
         // Increase instance ID for the next robot
+        if(resetBOTS){
+            nextInstanceID = 0;
+            resetBOTS = false;
+        }
         nextInstanceID++;
-        
+        actual_robotID++;
+
         // Save percepcion and robot objects
         this.percepcion = percepcion;
         this.robot = robot;
     }
-    
+
+    public int getRobotID() {
+        return instanceId;
+    }
+    public int getActualRobotID() {
+        return actual_robotID;
+    }
+
     /**
      * Abstract step method to determine the moving direction of the robot
      * 
